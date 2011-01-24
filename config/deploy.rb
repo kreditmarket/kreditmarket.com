@@ -1,4 +1,4 @@
-set :user, 'adam'
+set :user, 'kreditmarket'
 
 set :application, "kreditmarket.com"
 
