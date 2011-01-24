@@ -1,0 +1,210 @@
+%h2 
+  Сумма займа:
+  = succeed " руб." do
+    = @request.amount
+   
+
+%div
+  %strong Личные данные:
+%div
+  %span Фамилия: 
+  = @request.personal_last_name
+  %br/
+  %span Имя:  
+  = @request.personal_first_name
+  %br/
+  %span Отчество:  
+  = @request.personal_surname
+  %br/
+  %span Дата рождения:  
+  = I18n.l @request.personal_birth_date.to_date
+  %br/
+  %span Место рождения по паспорту:  
+  = @request.personal_birth_place
+  %br/
+  %span Семейный статус:  
+  = @request.personal_relationship_status
+  %br/
+  %span Образование:  
+  = @request.personal_education
+  %br/
+  %span ИНН:  
+  = @request.personal_inn
+  %br/
+  %span Количество иждевенцев:  
+  = @request.personal_izhd_count
+  %br/
+%br/
+%br/
+
+%div
+  %strong Документы:
+%div
+  %em Паспорт гражданина Российской Федерации
+  %br/
+  %span Серия:  
+  = @request.doc_seria
+  %br/
+  %span Номер:  
+  = @request.doc_number
+  %br/
+  %span Дата выдачи:  
+  = I18n.l @request.doc_date.to_date
+  %br/
+  %span Кем выдан:  
+  = @request.doc_author
+  %br/
+%br/
+%br/
+
+%div
+  %strong Адреса и телефона:
+%div
+  %em Адрес регистрации
+  %br/
+  %span Регион:  
+  = @request.reg_region
+  %br/
+  %span Город:  
+  = @request.reg_city
+  %br/
+  %span Улица:  
+  = @request.reg_street
+  %br/
+  %span Дом:  
+  = @request.reg_house
+  %br/
+  %span Корпус(строение):  
+  = @request.reg_building
+  %br/
+  %span Квартира:  
+  = @request.reg_flat
+  %br/
+  %span Дом. телефон: 
+  = @request.reg_phone
+  %br/
+  %br/
+  %br/
+  %em Адрес фактического проживания
+  %br/
+  %span Регион:  
+  = @request.fact_region
+  %br/
+  %span Город:  
+  = @request.fact_city
+  %br/
+  %span Улица:  
+  = @request.fact_street
+  %br/
+  %span Дом:  
+  = @request.fact_house
+  %br/
+  %span Корпус(строение):  
+  = @request.fact_building
+  %br/
+  %span Квартира:  
+  = @request.fact_flat
+  %br/
+  %span Период проживания:  
+  = @request.fact_period
+  %br/
+  %span Дом. телефон:  
+  = @request.fact_st_phone
+  %br/
+  %span Моб. телефон:  
+  = @request.fact_mob_phone
+  %br/
+%br/
+%br/
+
+%div
+  %strong Контактные лица:
+%div
+  %em Первое контактное лицо
+  %br/
+  %span Фамилия:  
+  = @request.fisrt_cont_per_last_name
+  %br/
+  %span Имя:  
+  = @request.fisrt_cont_per_first_name
+  %br/
+  %span Отчество:  
+  = @request.fisrt_cont_per_surname
+  %br/
+  %span Степень родства: 
+  = @request.fisrt_cont_per_relatives_level
+  %br/
+  %span Дом. телефон:  
+  = @request.fisrt_cont_per_st_phone
+  %br/
+  %span Моб. телефон:  
+  = @request.fisrt_cont_per_mob_phone
+  %br/
+  %br/
+  %br/
+  %em Второе контактное лицо
+  %br/
+  %span Фамилия:  
+  = @request.second_cont_per_last_name
+  %br/
+  %span Имя:  
+  = @request.second_cont_per_first_name
+  %br/
+  %span Отчество:  
+  = @request.second_cont_per_surname
+  %br/
+  %span Степень родства:  
+  = @request.second_cont_per_relatives_level
+  %br/
+  %span Дом. телефон:  
+  = @request.second_cont_per_st_phone
+  %br/
+  %span Моб. телефон: 
+  = @request.second_cont_per_st_phone
+  %br/
+%br/
+%br/
+
+%div
+  %strong Доходы:
+%div
+  %em Постоянная текущая занятость
+  %br/
+  %span Сфера деятельности:  
+  = @request.inc_activity_sphere
+  %br/
+  %span Стаж работы:  
+  = @request.inc_record_of_service
+  %br/
+  %span Должность:  
+  = @request.inc_post
+  %br/
+  %span Ежемесячный доход:  
+  = @request.inc_salary
+  %br/
+  %span Название организации:  
+  = @request.inc_org_name
+  %br/
+  %span Город:
+  = @request.inc_org_city
+  %br/
+  %span Улица:  
+  = @request.inc_org_street
+  %br/
+  %span Дом:  
+  = @request.inc_org_house
+  %br/
+  %span Корпус(строение):  
+  = @request.inc_org_building
+  %br/
+  %span Офис:  
+  = @request.inc_org_office
+  %br/
+  %span Телефон:  
+  = @request.inc_org_phone
+  %br/
+  %span Сайт:  
+  = @request.inc_org_site 
+  %br/
+%br/
+%br/

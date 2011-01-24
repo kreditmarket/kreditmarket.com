@@ -28,7 +28,7 @@ KreditmarketCom::Application.configure do
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 't-a-l-k-s.com',
+    :domain               => 'kreditmarket.com',
     :user_name            => 'adam.miribyan',
     :password             => 'god.love.sex.',
     :authentication       => 'plain',

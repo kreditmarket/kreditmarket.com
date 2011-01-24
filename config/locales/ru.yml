@@ -14,7 +14,7 @@ ru:
         precision: 0
   date:
     formats:
-      default: "%e %B"
+      default: "%e %B %Y"
       long: "%e %B %Y"
       short: "%e/%m/%y"
       dot_separated: "%e.%m"

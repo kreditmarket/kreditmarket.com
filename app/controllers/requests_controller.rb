@@ -44,6 +44,7 @@ class RequestsController < ApplicationController
 
     respond_to do |format|
       if @request.save
+        UserMailer.loan_request(@request).deliver
         format.html { redirect_to(@request, :notice => 'Request was successfully created.') }
         format.xml  { render :xml => @request, :status => :created, :location => @request }
       else

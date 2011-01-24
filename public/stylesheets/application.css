@@ -316,6 +316,14 @@ a:focus { outline: none; }
   font-family: Georgia;
   line-hieght: 15px;
 }
+.b-phone {
+  margin: 15px 0;
+  font-size: 14px;
+}
+.b-phone span {
+  display: block;
+  font-size: 20px;
+}
 h1 {
   position: relative;
   font-family: 'HelveticaNeueCyrillic45Light';
@@ -333,7 +341,7 @@ h2 {
   color: #282828;
   font-weight: normal;
 }
-h2.emphasized { color: #d04343; }
+.emphasized { color: #d04343; }
 h3 {
   position: relative;
   font-family: 'HelveticaNeueCyrillic45Light';
