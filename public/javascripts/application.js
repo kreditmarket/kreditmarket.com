@@ -9,6 +9,29 @@ function showStep(stepNo) {
 }
 
 $(document).ready(function(){	
+	$("#request_is_as_reg").click(function() {
+		if (this.checked) {
+			$("#request_fact_flat").attr('value', $("#request_reg_flat").val());
+		  	$("#request_fact_region").attr('value', $("#request_reg_region").val());
+	      	$("#request_fact_city").attr('value', $("#request_reg_city").val());
+	      	$("#request_fact_street").attr('value', $("#request_reg_street").val());
+	      	$("#request_fact_house").attr('value', $("#request_reg_house").val());
+	      	$("#request_fact_building").attr('value', $("#request_reg_building").val());
+	      	$("#request_fact_flat").attr('value', $("#request_reg_flat").val());
+	      	$("#request_fact_st_phone").attr('value', $("#request_reg_phone").val());
+		}
+		else {
+			$("#request_fact_flat").attr('value', '');
+		  	$("#request_fact_region").attr('value', '');
+	      	$("#request_fact_city").attr('value', '');
+	      	$("#request_fact_street").attr('value', '');
+	      	$("#request_fact_house").attr('value', '');
+	      	$("#request_fact_building").attr('value', '');
+	      	$("#request_fact_flat").attr('value', '');
+	      	$("#request_fact_st_phone").attr('value', '');
+		}
+	});
+	
 	$('#goto5-bnt').click(function() {
         showStep(5);
         $('body').stop().scrollTo( $('#goto5-lnk') , 500 );
