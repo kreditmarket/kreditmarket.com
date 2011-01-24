@@ -1,0 +1,144 @@
+= simple_form_for @request do |f|
+  = f.error_notification
+  
+  .b-form-wrapper
+    %label.string.optional{:for => "amount"}
+      = "Сумма"
+      %h3.price
+        %span{:id => "amount-value"}
+        :plain
+          <span class="rub">Р<i>–</i></span>
+    = f.input :amount, :as => :hidden        
+    = render "shared/price-slider"
+    
+    %ul.b-form-navigation
+      %li.step-links.selected{:id => "stepLink1"}
+        %a.pseudo{:onclick => "showStep(1)", :id => "goto1-lnk"} Личные данные
+      %li.step-links{:id => "stepLink2", :id => "stepLink2"}
+        %a.pseudo{:onclick => "showStep(2)", :id => "goto2-lnk"} Документы
+      %li.step-links{:id => "stepLink3", :id => "stepLink3"}
+        %a.pseudo{:onclick => "showStep(3)", :id => "goto3-lnk"} Адреса и телефоны
+      %li.step-links{:id => "stepLink4", :id => "stepLink4"}
+        %a.pseudo{:onclick => "showStep(4)", :id => "goto4-lnk"} Контактные лица
+      %li.step-links{:id => "stepLink5", :id => "stepLink5"}
+        %a.pseudo{:onclick => "showStep(5)", :id => "goto5-lnk"} Доходы
+      
+    %fieldset.b-form-sheet.selected{:id => "step1"}
+      .l-column 
+        = f.input :personal_last_name, :label => "Фамилия"
+        = f.input :personal_first_name, :label => "Имя"
+        = f.input :personal_surname, :label => "Отчество"
+        = f.input :personal_birth_place, :label => "Место рождения", :hint => "Как указано в паспорте."   
+      .l-column
+        = f.input :personal_birth_date, :as => :date, :start_year => Date.today.year - 90,
+                                :end_year => Date.today.year - 6,
+                                :order => [:day, :month, :year], :label => "Дата рождения"
+        = f.input :personal_relationship_status, :label => "Семейный статус"
+        = f.input :personal_education, :label => "Образование"
+        = f.input :personal_inn, :label => "ИНН"
+        = f.input :personal_izhd_count, :label => "Количество #{link_to "иждивенцев", "http://ru.wikipedia.org/wiki/%D0%98%D0%B6%D0%B4%D0%B8%D0%B2%D0%B5%D0%BD%D0%B5%D1%86"}"
+      .clear  
+      .buttons
+        %input{:type => "button", :value => "Вперед →", :class => "b-form-button-next", :id => "goto2-bnt", :onclick => "showStep(2)"}
+    
+    %fieldset.b-form-sheet{:id => "step2"}
+      %h3 Паспорт гражданина Российской Федерации
+      = f.label "Для получения займа необходимо будет предъявить еще один документ, удостоверяющий личность."
+      %br/
+      .l-column
+        = f.input :doc_seria, :label => "Серия"
+        = f.input :doc_number, :label => "Номер"
+      .l-column
+        = f.input :doc_author, :label => "Кем выдан"
+        = f.input :doc_date, :label => "Дата выдачи" 
+      .clear  
+      .buttons
+        %input{:type => "button", :value => "← Назад", :class => "b-form-button-prev", :id => "goto1-bnt", :onclick => "showStep(1)"}
+        %input{:type => "button", :value => "Вперед →", :class => "b-form-button-next", :id => "goto3-bnt", :onclick => "showStep(3)"}
+               
+    %fieldset.b-form-sheet{:id => "step3"}
+      %h3 Адрес регистрации    
+      .l-column          
+        = f.input :reg_region, :label => "Регион", :input_html => { :value => "Самара" }
+        = f.input :reg_city, :label => "Город"
+        = f.input :reg_street, :label => "Улица"
+        = f.input :reg_house, :label => "Дом"
+      .l-column
+        = f.input :reg_building, :label => "Строение/Корпус"
+        = f.input :reg_flat, :label => "Квартира"
+        = f.input :reg_phone, :label => "Телефон"
+      .clear       
+      %br/
+      %br/
+      %h3 Адрес фактического проживания
+      = f.input :is_as_reg, :label => "Совпадает с адресом регистрации"
+      .l-column       
+        = f.input :fact_region, :label => "Регион", :input_html => { :value => "Самара" }
+        = f.input :fact_city, :label => "Город"
+        = f.input :fact_street, :label => "Улица"
+        = f.input :fact_house, :label => "Дом"
+        = f.input :fact_building, :label => "Строение/Корпус"
+      .l-column        
+        = f.input :fact_flat, :label => "Квартира"
+        = f.input :fact_period, :label => "Период проживания"
+        = f.input :fact_st_phone, :label => "Дом. телефон"
+        = f.input :fact_mob_phone, :label => "Моб. телефон"
+      .clear  
+      .buttons 
+        %input{:type => "button", :value => "← Назад", :class => "b-form-button-prev", :id => "goto2-bnt", :onclick => "showStep(2)"}                  
+        %input{:type => "button", :value => "Вперед →", :class => "b-form-button-next", :id => "goto4-bnt", :onclick => "showStep(4)"}
+        
+    %fieldset.b-form-sheet{:id => "step4"}
+      = f.label "Не заявитель, можно родственники, но телефоны не должны совпадать с уже указанными."
+      %br/
+      %h3 Первое контактное лицо
+      .l-column
+        = f.input :fisrt_cont_per_last_name, :label => "Фамилия"
+        = f.input :fisrt_cont_per_first_name, :label => "Имя"
+        = f.input :fisrt_cont_per_surname, :label => "Отчество"
+      .l-column
+        = f.input :fisrt_cont_per_relatives_level, :label => "Степень родства"
+        = f.input :fisrt_cont_per_st_phone, :label => "Дом. телефон"
+        = f.input :fisrt_cont_per_mob_phone, :label => "Моб. телефон"
+      .clear
+      %br/
+      %br/      
+      %h3 Второе контактное лицо
+      .l-column
+        = f.input :second_cont_per_last_name, :label => "Фамилия"
+        = f.input :second_cont_per_first_name, :label => "Имя"
+        = f.input :second_cont_per_surname, :label => "Отчество"
+      .l-column
+        = f.input :second_cont_per_relatives_level, :label => "Степень родства"
+        = f.input :second_cont_per_st_phone, :label => "Дом. телефон"
+        = f.input :second_cont_per_mob_phone, :label => "Моб. телефон"
+      .clear  
+      .buttons
+        %input{:type => "button", :value => "← Назад", :class => "b-form-button-prev", :id => "goto3-bnt", :onclick => "showStep(3)"}
+        %input{:type => "button", :value => "Вперед →", :class => "b-form-button-next", :id => "goto5-bnt", :onclick => "showStep(5)"}
+      
+    %fieldset.b-form-sheet{:id => "step5"}
+      %h3 Постоянная текущая занятость
+      .l-column
+        = f.input :inc_activity_sphere, :label => "Сфера деятельности"
+        = f.input :inc_record_of_service, :label => "Стаж работы"
+      .l-column
+        = f.input :inc_post, :label => "Должность"
+        = f.input :inc_salary, :label => "Ежемесячный доход"
+      .clear
+      %br/
+      %br/
+      .l-column
+        = f.input :inc_org_name, :label => "Название организации"
+        = f.input :inc_org_city, :label => "Город"
+        = f.input :inc_org_street, :label => "Улица"
+        = f.input :inc_org_house, :label => "Дом"
+      .l-column
+        = f.input :inc_org_building, :label => "Строение/Корпус"
+        = f.input :inc_org_office, :label => "Офис"
+        = f.input :inc_org_phone, :label => "Телефон"
+        = f.input :inc_org_site , :label => "Сайт"
+      .clear
+      .button 
+        %input{:type => "image", :src => "/images/send.png"}
+        

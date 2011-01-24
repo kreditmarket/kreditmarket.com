@@ -1,4 +1,8 @@
 KreditmarketCom::Application.routes.draw do
+  resources :requests
+  
+  root :to => "requests#new"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

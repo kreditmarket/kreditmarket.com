@@ -1,0 +1,36 @@
+<div class="filter-box" id="filter-box">
+	<div class="body png">
+        <div class="price block block-radio" id="filter-price">
+            <div class="body_container"> 
+                <div id="price-selector" class="slider_container container">
+                <input type="text" id="price" name="price" value="8000" />
+                </div> 
+            </div> 
+        </div>
+        <script type="text/javascript">
+var labels = '<span class="legend" style="left: 0%;"><span class="container" style="bottom: 10px;">200</span></span>' +
+			 '<span class="legend" style="left: 25%;"><span class="container" style="bottom: 11px;">2150</span></span>' +
+			 '<span class="legend" style="left: 50%;"><span class="container" style="bottom: 13px;">4100</span></span>' +
+			 '<span class="legend" style="left: 75%;"><span class="container" style="bottom: 14px;">6050</span></span>' +
+			 '<span class="legend" style="left: 100%;"><span class="container" style="bottom: 16px;">8000</span></span>';
+ 
+$("#price-selector").html(labels); // Замещаем статичное содержимое блока
+$('#price-value').html('8000'); // Подставляем цену в поле, так как по умолчанию выбираем максимальное значение ползунка
+// Слайдер сделан на основе стандартного компонента jQueriUI
+$(function() {
+	$("#price-selector").slider({
+		range: "min",
+		value: 100,
+		min: 0,
+		max: 100,
+		slide: function(event, ui) {						
+			var value = 200 + Math.round(7800*ui.value/100);
+			var price = value;
+			$('#price-value').html(price); // Подставляем значение строки
+			// !!! Здесь же нужно будет подставить цену в ту форму или в тот запрос, который будет взаимодействовать с сервером
+		}
+	});
+});
+        </script>
+    </div>
+</div>

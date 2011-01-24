@@ -1,0 +1,22 @@
+!!! 5
+%html{:lang => "en-US"}
+  %head
+    = render "shared/head"
+  %body
+    .l-page
+      .l-page
+         
+        .g-limit.g-centered
+          .l-view.l-grid
+            .l-column.l-column-full
+              = yield
+            .l-column-right
+              .b-banner
+                = image_tag "15minutes.jpg"
+            .clear
+          
+    .l-page-bottom
+      .g-limit.g-centered
+        .l-view
+          .b-footer
+            

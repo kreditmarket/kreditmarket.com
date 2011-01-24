@@ -1,0 +1,83 @@
+ru:
+  support:
+    array:
+      words_connector: ", "
+      last_word_connector: ", "
+      two_words_connector: ", "
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "руб."
+        separator: "."
+        delimiter: " "
+        precision: 0
+  date:
+    formats:
+      default: "%e %B"
+      long: "%e %B %Y"
+      short: "%e/%m/%y"
+      dot_separated: "%e.%m"
+      highlighted_day: "<em>%e</em>%B"
+      weekday: "%A"
+    day_names: [воскресенье, понедельник, вторник, среда, четверг, пятница, суббота]
+    abbr_day_names: [вс, пн, вт, ср, чт, пт, сб]
+    today: сегодня
+    yesterday: вчера
+    tomorrow: завтра
+    intervals:
+      one_day: "{{start}} и {{finish}}"
+      default: "c {{start}} по {{finish}}"
+
+    # Don't forget the nil at the beginning; there's no such thing as a 0th month
+    month_names: [~, января, февраля, марта, апреля, мая, июня, июля, августа, сентября, октября, ноября, декабря]
+    standalone_month_names: [~, Январь, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь]
+    abbr_month_names: [~, янв, фев, мар, апр, мая, июн, июл, авг, сен, окт, нояб, дек]
+    # Used in date_select and datime_select.
+    order: [ :day, :month, :year ]
+
+  time:
+    formats:
+      default: "%e %B в %H:%M"
+      comma_separated: "%e %B, %H:%M"
+      short: "%H:%M"
+      long: "%e %B %Y в %H:%M"
+      compact: "%e/%m/%y %H:%M"
+      month_only: "%B"
+      month: "%B"
+    am: "am"
+    pm: "pm"
+  datetime:
+    prompts:
+      day: День
+      month: Месяц
+      year: Год
+      
+  app:
+    back: "Назад"
+    
+    flashes:
+      requests:
+        create: "Заявка успешно сохранена и отправлена на рассмотрение."
+        
+    
+    clearance:
+      login:
+        anchor: "Войти"
+        title: "Вход на сайт"
+      logout: 
+        anchor: "Выйти"
+      signup:
+        title: "Регистрация"
+    
+    requests:
+      no_new_requests: "Новых заявок нет"
+      fields:
+        fullname: "Имя"
+        email: "Электропочта"
+        price: "Сумма"
+        details: "Пожелания"
+      new:
+        title: "Новая заявка"        
+      index:
+        title: "Список заявок"                      
