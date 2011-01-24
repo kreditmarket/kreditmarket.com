@@ -139,6 +139,7 @@
         = f.input :inc_org_phone, :label => "Телефон"
         = f.input :inc_org_site , :label => "Сайт"
       .clear
-      .button 
-        %input{:type => "image", :src => "/images/send.png"}
+      .buttons 
+        %input{:type => "button", :value => "← Назад", :class => "b-form-button-prev", :id => "goto4-bnt", :onclick => "showStep(4)"}
+        %input{:type => "submit", :value => "Отправить заявку", :class => "b-form-button-submit"}
         

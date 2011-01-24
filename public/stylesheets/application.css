@@ -244,12 +244,18 @@ a:focus { outline: none; }
 .b-form-wrapper .buttons .b-form-button-next {
   display: block;
   float: right;
-  margin-right: 70px;
+  margin-right: 75px;
 }
 .b-form-wrapper .buttons .b-form-button-prev {
   display: block;
   float: left;
   margin-left: 0.4em;
+}
+.b-form-wrapper .buttons .b-form-button-submit {
+  display: block;
+  float: right;
+  font-size: 18px;
+  margin-right: 70px;
 }
 .g-centered { margin: 0px auto; }
 .g-limit { width: 760px; }
@@ -280,6 +286,11 @@ a:focus { outline: none; }
 }
 .l-page-bottom .l-page-bottom .l-view { padding-top: 15px; }
 .clear { clear: both; }
+.b-stripe {
+  background: url(/images/stripe.gif) repeat-x;
+  height: 5px;
+  position: relative;
+}
 .b-header { margin: 30px 0px 25px 0px; }
 .b-header h1 {
   font-size: 50px;
