@@ -5,6 +5,6 @@ class UserMailer < ActionMailer::Base
   
   def loan_request(request)
     @request = request
-    mail(:to => "janitor@t-a-l-k-s.com", :subject => "Новая онлайн заявка")
+    mail(:to => "magazinkreditov@mail.ru", :subject => "Новая онлайн заявка")
   end
 end
