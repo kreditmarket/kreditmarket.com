@@ -257,6 +257,23 @@ a:focus { outline: none; }
   font-size: 18px;
   margin-right: 70px;
 }
+ul.list { margin-bottom: 25px; }
+ul.list li {
+  list-style-type: circle !important;
+  margin: 0.3em 0 0.3em 1.5em;
+}
+span.list-title {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+p.big {
+  display: inline-block;
+  font-size: 18px;
+  line-hieght: 20px;
+  margin-bottom: 10px;
+}
 .g-centered { margin: 0px auto; }
 .g-limit { width: 760px; }
 .l-page {
@@ -302,25 +319,22 @@ a:focus { outline: none; }
 }
 .b-banner { margin-top: 28px; }
 .b-greetings {
-  font-style: italic;
-  margin: 40px 0px 50px 0px;
+  margin: 40px 0px 30px 0px;
   width: 520px;
 }
 .b-greetings strong {
   display: inline-block;
-  font-style: italic;
   font-weight: bold;
   padding-bottom: 5px;
 }
-.b-greetings p {
-  font-family: Georgia;
-  line-hieght: 15px;
-}
+.b-greetings p { line-hieght: 15px; }
 .b-phone {
   margin: 15px 0;
   font-size: 14px;
 }
-.b-phone span {
+.b-phone span.number {
+  font-family: Georgia;
+  font-style: italic;
   display: block;
   font-size: 20px;
 }

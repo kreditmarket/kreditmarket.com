@@ -147,6 +147,28 @@ a:focus {outline:none;}
 	}
 }
 
+ul.list {
+	margin-bottom: 25px;
+		
+	li {
+		list-style-type: circle !important;
+		margin: .3em 0 .3em 1.5em;
+	}	
+}
+
+span.list-title {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+p.big {
+	display: inline-block;
+	font-size: 18px;
+	line-hieght: 20px;
+	margin-bottom: 10px;
+}
 
 // Layout
 .g-centered {
@@ -215,18 +237,15 @@ a:focus {outline:none;}
 	margin-top: 28px; }
 	
 .b-greetings {
-	font-style: italic;
-	margin: 40px 0px 50px 0px;
+	margin: 40px 0px 30px 0px;
 	width: 520px;
 	
 	strong { 
 		display: inline-block;
-		font-style: italic;
 		font-weight: bold; 
 		padding-bottom: 5px; 
 	}
-	p {
-		font-family: Georgia;					
+	p {	
 		line-hieght: 15px;		
 	}
 }
@@ -235,7 +254,9 @@ a:focus {outline:none;}
 	margin: 15px 0;
 	font-size: 14px;
 	
-	span {
+	span.number {
+		font-family: Georgia;
+		font-style: italic;
 		display: block;
 		font-size: 20px; 
 	}
