@@ -130,6 +130,11 @@ form.simple_form .hint {
   font-weight: normal;
   line-height: 1.7;
 }
+form.simple_form .error {
+  color: red;
+  display: block;
+  margin-top: 3px;
+}
 form.simple_form .boolean label {
   display: inline;
   margin-right: 15px;

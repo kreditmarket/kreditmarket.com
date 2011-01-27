@@ -25,9 +25,9 @@
       
     %fieldset.b-form-sheet.selected{:id => "step1"}
       .l-column 
-        = f.input :personal_last_name, :label => "Фамилия"
-        = f.input :personal_first_name, :label => "Имя"
-        = f.input :personal_surname, :label => "Отчество"
+        = f.input :personal_last_name, :label => "Фамилия", :required => false
+        = f.input :personal_first_name, :label => "Имя", :required => false
+        = f.input :personal_surname, :label => "Отчество", :required => false
         = f.input :personal_birth_place, :label => "Место рождения", :hint => "Как указано в паспорте."   
       .l-column
         = f.input :personal_birth_date, :as => :date, :start_year => Date.today.year - 90,
