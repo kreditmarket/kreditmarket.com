@@ -1,0 +1,94 @@
+.pageWrapper {
+	background-color: #e1e1e1;	
+	margin: 0 auto;
+	padding: 20px;
+	position: relative;
+	top: 50px;
+	width: 720px;
+}
+
+.b-picker {margin-bottom: 10px;}
+
+.b-picker .b-picker-value {
+	width: 233px;
+	z-index: 10;	
+}
+
+.b-picker .b-picker-value,
+.b-picker .b-picker-operator {
+	float: left;
+}
+
+.b-loan-results .primary-count 	{ color: #df1d5c; }
+.b-loan-results .fees 			{ color: #6cba33; }
+.b-loan-results .secondary-count 	{ color: #2576d2; }
+
+.b-picker .b-picker-operator-minus,
+.b-picker .b-picker-operator-plus {
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+b-picker-operator {}
+
+.b-picker-amount .ui-widget-content {
+	border: #df1d5c solid 1px !important;
+}
+
+.b-picker-days .ui-widget-content {
+	border: #6cba33 solid 1px !important;
+}
+
+.clear {
+	clear: both;
+}
+
+.new-button, .new-button button {
+	background: url(../images/new-button.png) no-repeat;
+	display: -moz-inline-stack;
+	display: inline-block; /* Эмуляция для FF2 */
+	font-size: 30px;
+	color: #212121;
+}
+ 
+.new-button { margin-right: 3px; }
+ 
+.new-button button {
+	border: 0;
+	margin: 0;
+	padding: 0 12px 0 9px;
+	position: relative;
+	left: 3px;
+	height: 48px;
+	line-height: 22px;
+	background-position: top right;
+	white-space: nowrap;
+}
+
+.new-button-small, .new-button-small button {
+	background: url(../images/new-button-small.png) no-repeat;
+	display: -moz-inline-stack;
+	display: inline-block; /* Эмуляция для FF2 */
+	font-size: 22px;
+	color: #212121;
+}
+ 
+.new-button-small { margin-right: 3px; }
+ 
+.new-button-small button {
+	border: 0;
+	margin: 0;
+	padding: 0 12px 0 9px;
+	position: relative;
+	left: 3px;
+	height: 38px;
+	line-height: 22px;
+	background-position: top right;
+	white-space: nowrap;
+}
+
+.b-recalc-form {
+	position: relative;
+	width: 300px;
+}

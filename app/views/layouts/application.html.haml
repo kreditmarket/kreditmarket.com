@@ -4,21 +4,22 @@
     = render "shared/head"
   %body
     = render "shared/metrika"
-    .b-stripe
-    .l-page
-      .l-page
-         
-        .g-limit.g-centered
-          .l-view.l-grid
-            .l-column.l-column-full
-              = yield
-            .l-column-right
-              .b-banner
-                = image_tag "15minutes.jpg"
-            .clear
-          
-    .l-page-bottom
-      .g-limit.g-centered
-        .l-view
-          .b-footer
+    .pageContainer
+      .pageWrapper
+        .header
+          .logo
+            = link_to_unless_current(image_tag('logo.png'), root_path)
+          .address
+            %h2 Самара, ул. Советская 52
+            = link_to 'Схема проезда', '#'
+          .phone
+            %h3 Прием заявок по телефону
+            %span.nobr
+              %span.code (846)
+              %span.number 997-15-55
+          .clear
             
+        .content
+          = yield
+          
+        .footer            

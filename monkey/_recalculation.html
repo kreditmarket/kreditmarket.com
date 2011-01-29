@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Recalculation</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+<link href="stylesheets/application.css"  rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript" src="javascripts/jquery-1.4.4.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function() {
+		var feePercent = 0.02;
+		
+		$(".recalc-show").click(function() {
+			var primaryCount = parseInt($(".primary-count").html());
+			var fees = parseInt($(".fees").html());
+			var secondaryCount = parseInt($(".secondary-count").html());
+			
+			var primaryCountInput = $('<input type="text" />');
+			primaryCountInput.attr('id', 'primary-count-input');
+			primaryCountInput.attr('value', primaryCount);
+			
+			$(".recalc-show").hide();
+			$(".recalc-done").show();				
+			$(".primary-count").replaceWith(primaryCountInput);
+			
+			console.log(primaryCount);
+			console.log(fees);			
+			console.log(secondaryCount);
+		});
+		
+		$("#primary-count-input").change(function() {
+			var primaryAmount = $(this).val();
+			var feePerDay = primaryAmount * feePercent;
+			var daysCount = (secondaryAmount - primaryAmount) / feePerDay
+			var fees = feePerDay * daysCount;
+			var secondaryAmount = fees + parseInt(primaryAmount);
+			
+			$(".primary-count").html(primaryAmount);
+			$(".fees").html(fees);
+			$(".secondary-count").html(secondaryAmount);
+		});
+	})
+</script>
+<div class="pageWrapper">
+	<div class="b-loan-results">
+    	Занимаете <span class="primary-count">3000 руб.</span> + налоги и проценты <span  class="fees">600 руб.</span> = отдаете <span class="secondary-count">3600 руб.</span>
+    </div>
+    <span style="cursor: pointer;" class="recalc-show">Пересчитать</span>
+    <span style="cursor: pointer; display: none;" class="recalc-done">Готово</span>
+</div>
+</body>
+</html>

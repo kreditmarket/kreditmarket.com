@@ -9,6 +9,165 @@ function showStep(stepNo) {
 }
 
 $(document).ready(function(){	
+	var defaultAmountValue = 3000;
+	var defaultDaysValue = 10;
+	var feePercent = 0.02;
+		
+	/***
+	// Money
+	***/
+	$("#request_amount").attr('value', '3000');
+	$("#data-picker-amount").slider({
+		value: defaultAmountValue,
+		min: 1000,
+		max: 10000,
+		step: 100,
+		slide: function(event, ui){
+			var amount = ui.value;
+			$("#request_amount").attr('value', amount);
+			
+			recalculate();
+		}
+		
+	});
+	
+	$("#data-picker-minus-amount").click(function() {
+		var amountSlider = $("#data-picker-amount");
+		
+		var value = amountSlider.slider("value");
+		var step = amountSlider.slider("option", "step");
+		var amount = value - step;
+		
+		amountSlider.slider("option", "value", amount);
+		$("#request_amount").attr('value', amount);
+		
+		recalculate();
+	});
+	
+	$("#data-picker-plus-amount").click(function() {
+		var amountSlider = $("#data-picker-amount");
+		
+		var value = amountSlider.slider("value");
+		var step = amountSlider.slider("option", "step");
+		var amount = value + step;
+		
+		amountSlider.slider("option", "value", amount);
+		$("#request_amount").attr('value', amount);
+		
+		recalculate();
+	});
+	
+	$("#request_amount").change(function(){
+		var Slider = $("#data-picker-amount");
+		
+		if ($(this).val() > 10000) {
+			alert("Сумма займа не может превышать десяти тысяч рублей.");
+			$(this).attr("value", defaultAmountValue);
+			Slider.slider("option", "value", defaultAmountValue);
+			
+			recalculate();
+			
+			return false;
+		} else if($(this).val() < 1000) {
+			alert("Сумма займа не может быть менее тысячи рублей.");
+			$(this).attr("value", defaultAmountValue);
+			Slider.slider("option", "value", defaultAmountValue);
+			
+			recalculate();
+			
+			return false;
+		}	
+		
+		Slider.slider("option", "value", $(this).val());
+		
+		recalculate();
+	});	
+	
+	/***
+	// Days
+	***/
+	$("#request_days").attr('value', '10');
+	$("#data-picker-days").slider({
+		value: defaultDaysValue,
+		min: 7,
+		max: 16,
+		step: 1,
+		slide: function(event, ui){
+			var amount = ui.value;
+			$("#request_days").attr('value', amount);
+			
+			recalculate();
+		}
+		
+	});
+	
+	$("#data-picker-minus-day").click(function() {
+		var amountSlider = $("#data-picker-days");
+		
+		var value = amountSlider.slider("value");
+		var step = amountSlider.slider("option", "step");
+		var amount = value - step;
+		
+		amountSlider.slider("option", "value", amount);
+		$("#request_days").attr('value', amount);
+		
+		recalculate();
+	});
+	
+	$("#data-picker-plus-day").click(function() {
+		var amountSlider = $("#data-picker-days");
+		
+		var value = amountSlider.slider("value");
+		var step = amountSlider.slider("option", "step");
+		var amount = value + step;
+		
+		amountSlider.slider("option", "value", amount);
+		$("#request_days").attr('value', amount);
+		
+		recalculate();
+	});
+	
+	$("#request_days").change(function(){
+		var Slider = $("#data-picker-days");
+					
+		if ($(this).val() > 16) {
+			alert("Займ не выдается на срок более чем 16 дней.");
+			Slider.slider("option", "value", defaultDaysValue);				
+			$(this).attr("value", defaultDaysValue);
+			
+			recalculate();
+			
+			return false;
+		} else if($(this).val() < 7) {
+			alert("Займ не выдается на срок менее чем 7 дней.");
+			Slider.slider("option", "value", defaultDaysValue);
+			$(this).attr("value", defaultDaysValue);
+			
+			recalculate();
+			
+			return false;
+		}
+		
+		Slider.slider("option", "value", $(this).val());		
+		
+		recalculate();	
+	});	
+	
+	/***
+	// Results
+	***/
+	var recalculate = function() {
+		var primaryAmount = $("#request_amount").val();
+		var daysCount = $("#request_days").val();
+		var feePerDay = primaryAmount * feePercent;
+		var fees = feePerDay * daysCount;
+		var secondaryAmount = fees + parseInt(primaryAmount);
+		
+		$(".primary-count").html(primaryAmount);
+		$(".fees").html(fees);
+		$(".secondary-count").html(secondaryAmount);
+	};
+
 	$("#request_is_as_reg").click(function() {
 		if (this.checked) {
 			$("#request_fact_flat").attr('value', $("#request_reg_flat").val());

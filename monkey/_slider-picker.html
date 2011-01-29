@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Slider Picker</title>
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+<link href="stylesheets/application.css"  rel="stylesheet" media="screen" type="text/css" />
+<link href="stylesheets/smoothness/jquery-ui-1.8.9.custom.css"  rel="stylesheet" media="screen" type="text/css" />
+<script type="text/javascript" src="javascripts/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery-ui-1.8.9.custom.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(function() {
+		var defaultAmountValue = 3000;
+		var defaultDaysValue = 10;
+		var feePercent = 0.02;
+			
+		/***
+		// Money
+		***/
+		$("#request_amount").attr('value', '3000');
+		$("#data-picker-amount").slider({
+			value: defaultAmountValue,
+			min: 1000,
+			max: 10000,
+			step: 100,
+			slide: function(event, ui){
+				var amount = ui.value;
+				$("#request_amount").attr('value', amount);
+				
+				recalculate();
+			}
+			
+		});
+		
+		$("#data-picker-minus-amount").click(function() {
+			var amountSlider = $("#data-picker-amount");
+			
+			var value = amountSlider.slider("value");
+			var step = amountSlider.slider("option", "step");
+			var amount = value - step;
+			
+			amountSlider.slider("option", "value", amount);
+			$("#request_amount").attr('value', amount);
+			
+			recalculate();
+		});
+		
+		$("#data-picker-plus-amount").click(function() {
+			var amountSlider = $("#data-picker-amount");
+			
+			var value = amountSlider.slider("value");
+			var step = amountSlider.slider("option", "step");
+			var amount = value + step;
+			
+			amountSlider.slider("option", "value", amount);
+			$("#request_amount").attr('value', amount);
+			
+			recalculate();
+		});
+		
+		$("#request_amount").change(function(){
+			var Slider = $("#data-picker-amount");
+			
+			if ($(this).val() > 10000) {
+				alert("Сумма займа не может превышать десяти тысяч рублей.");
+				$(this).attr("value", defaultAmountValue);
+				Slider.slider("option", "value", defaultAmountValue);
+				
+				recalculate();
+				
+				return false;
+			} else if($(this).val() < 1000) {
+				alert("Сумма займа не может быть менее тысячи рублей.");
+				$(this).attr("value", defaultAmountValue);
+				Slider.slider("option", "value", defaultAmountValue);
+				
+				recalculate();
+				
+				return false;
+			}	
+			
+			Slider.slider("option", "value", $(this).val());
+			
+			recalculate();
+		});	
+		
+		/***
+		// Days
+		***/
+		$("#request_days").attr('value', '10');
+		$("#data-picker-days").slider({
+			value: defaultDaysValue,
+			min: 7,
+			max: 16,
+			step: 1,
+			slide: function(event, ui){
+				var amount = ui.value;
+				$("#request_days").attr('value', amount);
+				
+				recalculate();
+			}
+			
+		});
+		
+		$("#data-picker-minus-day").click(function() {
+			var amountSlider = $("#data-picker-days");
+			
+			var value = amountSlider.slider("value");
+			var step = amountSlider.slider("option", "step");
+			var amount = value - step;
+			
+			amountSlider.slider("option", "value", amount);
+			$("#request_days").attr('value', amount);
+			
+			recalculate();
+		});
+		
+		$("#data-picker-plus-day").click(function() {
+			var amountSlider = $("#data-picker-days");
+			
+			var value = amountSlider.slider("value");
+			var step = amountSlider.slider("option", "step");
+			var amount = value + step;
+			
+			amountSlider.slider("option", "value", amount);
+			$("#request_days").attr('value', amount);
+			
+			recalculate();
+		});
+		
+		$("#request_days").change(function(){
+			var Slider = $("#data-picker-days");
+						
+			if ($(this).val() > 16) {
+				alert("Займ не выдается на срок более чем 16 дней.");
+				Slider.slider("option", "value", defaultDaysValue);				
+				$(this).attr("value", defaultDaysValue);
+				
+				recalculate();
+				
+				return false;
+			} else if($(this).val() < 7) {
+				alert("Займ не выдается на срок менее чем 7 дней.");
+				Slider.slider("option", "value", defaultDaysValue);
+				$(this).attr("value", defaultDaysValue);
+				
+				recalculate();
+				
+				return false;
+			}
+			
+			Slider.slider("option", "value", $(this).val());		
+			
+			recalculate();	
+		});	
+		
+		/***
+		// Results
+		***/
+		var recalculate = function() {
+			var primaryAmount = $("#request_amount").val();
+			var daysCount = $("#request_days").val();
+			var feePerDay = primaryAmount * feePercent;
+			var fees = feePerDay * daysCount;
+			var secondaryAmount = fees + parseInt(primaryAmount);
+			
+			$(".primary-count").html(primaryAmount);
+			$(".fees").html(fees);
+			$(".secondary-count").html(secondaryAmount);
+		};
+		
+	});
+</script>
+<div class="pageWrapper">
+    <div class="b-picker b-picker-amount">
+	    <div class="b-picker-operator b-picker-operator-minus" id="data-picker-minus-amount"><span>-</span></div>
+        <div id="data-picker-amount" class="b-picker-value"></div>
+        <div class="b-picker-operator b-picker-operator-plus" id="data-picker-plus-amount"><span>+</span></div> 
+        <div class="b-picker-value"><input type="text" name="request[amount]" id="request_amount" value="" /></div>
+        <div class="clear"></div>       
+    </div>
+    <div class="b-picker b-picker-days">
+	    <div class="b-picker-operator b-picker-operator-minus" id="data-picker-minus-day"><span>-</span></div>
+        <div id="data-picker-days" class="b-picker-value"></div>
+        <div class="b-picker-operator b-picker-operator-plus" id="data-picker-plus-day"><span>+</span></div> 
+        <div class="b-picker-value"><input type="text" name="request[days]" id="request_days" value="" /></div>
+        <div class="clear"></div>       
+    </div>
+    <div class="b-loan-results">
+    	Занимаете <span class="primary-count">3000 руб.</span> + налоги и проценты <span  class="fees">600 руб.</span> = отдаете <span class="secondary-count">3600 руб.</span>
+    </div>
+</div>
+</body>
+</html>
