@@ -1,21 +1,26 @@
 .b-picker.b-picker-amount
-  #data-picker-minus-amount.b-picker-operator.b-picker-operator-minus
-    %span -
-  #data-picker-amount.b-picker-value
-  #data-picker-plus-amount.b-picker-operator.b-picker-operator-plus
-    %span +
-  .b-picker-value
-    %input#request_amount{:name => "request[amount]", :type => "text", :value => ""}/
+  %label{:for => "request_amount"} Какая сумма требуется?
+  .input
+    .slider
+      #data-picker-minus-amount.b-picker-operator.b-picker-operator-minus.b-picker-operator-red
+      #data-picker-amount.b-picker-value
+      #data-picker-plus-amount.b-picker-operator.b-picker-operator-plus.b-picker-operator-red
+    .b-picker-value
+      %input#request_amount{:name => "request[amount]", :type => "text", :value => ""}/
+      рублей
   .clear
 .b-picker.b-picker-days
-  #data-picker-minus-day.b-picker-operator.b-picker-operator-minus
-    %span -
-  #data-picker-days.b-picker-value
-  #data-picker-plus-day.b-picker-operator.b-picker-operator-plus
-    %span +
-  .b-picker-value
-    %input#request_days{:name => "request[days]", :type => "text", :value => ""}/
+  %label{:for => "request_days"} На какой срок?
+  .input
+    .slider
+      #data-picker-minus-day.b-picker-operator.b-picker-operator-minus.b-picker-operator-green
+      #data-picker-days.b-picker-value
+      #data-picker-plus-day.b-picker-operator.b-picker-operator-plus.b-picker-operator-green
+    .b-picker-value
+      %input#request_days{:name => "request[days]", :type => "text", :value => ""}/
+      дней
   .clear
+%hr
 .b-loan-results
   Занимаете
   %span.primary-count 3000 руб.
@@ -23,3 +28,6 @@
   %span.fees 600 руб.
   \= отдаете
   %span.secondary-count 3600 руб.
+.b-actions
+  %span{:class => "new-button"}
+    %button Занять

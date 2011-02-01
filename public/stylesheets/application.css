@@ -130,6 +130,7 @@ body {
   background: white;
   font-family: Helvetica, Arial, serif;
   font-size: 14px;
+  overflow-x: hidden;
 }
 h1, h2, h3 { font-family: 'Arial black', Gadget, sans-serif; }
 h1 {
@@ -148,6 +149,12 @@ h3 {
 }
 .clear { clear: both; }
 .nobr { white-space: nowrap; }
+hr {
+  border: 0;
+  border-top: 1px solid #888888;
+  clear: both;
+  height: 0px;
+}
 .emphasized { color: #df1d5c; }
 span.half-space {
   font-size: 0.5em;
@@ -157,8 +164,11 @@ span.half-space {
   background: url("/images/top-line.png") no-repeat 0 0;
   margin: 0px auto;
   width: 1000px;
+  min-height: 0px;
+  padding-bottom: 120px;
+  position: relative;
 }
-.pageWrapper { padding: 0 30px; }
+.pageWrapper { padding: 0px 5px 100px 34px; }
 .header {
   margin-right: -60px;
   padding: 30px 0 53px 0;
@@ -187,9 +197,15 @@ span.half-space {
   vertical-align: top;
 }
 .header .phone .number { font-size: 104%; }
+.content { width: 950px; }
 .content .superForm {
+  position: relative;
+  margin-bottom: 68px;
+}
+.content .superForm .bg {
   background-color: #e1e1e1;
   padding: 20px 15px;
+  width: 740px;
 }
 .content .superForm .b-picker { margin-bottom: 10px; }
 .content .superForm .b-picker .b-picker-value {
@@ -211,12 +227,125 @@ span.half-space {
   font-weight: bold;
   cursor: pointer;
 }
-.content .superForm b-picker-operator { font-size: 22px; }
+.content .superForm .b-picker-operator-plus {
+  margin-left: 5px;
+  margin-right: 10px;
+  margin-top: -2px;
+  height: 15px;
+  width: 16px;
+}
+.content .superForm .b-picker .b-picker-operator-minus {
+  margin-right: 5px;
+  margin-top: 2px;
+  height: 5px;
+  width: 17px;
+}
+.content .superForm .b-picker-operator-minus.b-picker-operator-red { background: url("/images/minus-sign-red.png") no-repeat; }
+.content .superForm .b-picker-operator-minus.b-picker-operator-green { background: url("/images/minus-sign-green.png") no-repeat; }
+.content .superForm .b-picker-operator-plus.b-picker-operator-red { background: url("/images/plus-sign-red.png") no-repeat; }
+.content .superForm .b-picker-operator-plus.b-picker-operator-green { background: url("/images/plus-sign-green.png") no-repeat; }
+.content .superForm .b-picker-operator span { font-size: 22px; }
 .content .superForm .b-picker-amount .ui-widget-content { border: #df1d5c solid 1px !important; }
 .content .superForm .b-picker-days .ui-widget-content { border: #6cba33 solid 1px !important; }
 .content .superForm .b-recalc-form {
   position: relative;
   width: 300px;
+}
+.content .superForm label {
+  display: inline-block;
+  font-size: 18px;
+  width: 215px;
+}
+.content .superForm .input {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+}
+.content .superForm .input .slider {
+  padding-top: 10px;
+  position: relative;
+  float: left;
+}
+.content .superForm input[type="text"] {
+  background: url("/images/bg-input-sliders.jpg") no-repeat 0 0;
+  border: 0px;
+  font-size: 90%;
+  padding: 7px 0px 0px 8px;
+  height: 20px;
+  width: 38px;
+}
+.content .superForm hr { margin: 15px 0px; }
+.content .superForm .b-loan-results {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.content .superForm .b-actions {
+  background-color: #e1e1e1;
+  padding: 5px 10px;
+  position: absolute;
+  margin: 5px 295px;
+}
+.content .superForm .b-ruble-guy {
+  position: absolute;
+  background: url("/images/ruble-guy.png");
+  height: 302px;
+  width: 287px;
+  top: -25px;
+  right: -25px;
+}
+.content .superForm .b-star {
+  position: absolute;
+  height: 85px;
+  top: -20px;
+  width: 85px;
+}
+.content .superForm .b-star-15_minutes {
+  background: url("/images/15-minutes.png");
+  right: 335px;
+}
+.content .superForm .b-star-2_docs {
+  background: url("/images/only-2-docs.png");
+  right: 267px;
+}
+.content .b-content-body {
+  padding-left: 20px;
+  clear: left;
+  zoom: 1;
+}
+.content .b-content-body .b-content-main {
+  float: left;
+  position: relative;
+  zoom: 1;
+}
+.content .b-content-body .b-content-footnotes {
+  float: left;
+  position: relative;
+  zoom: 1;
+}
+.content .b-content-body .b-content-main {
+  margin-right: 34px;
+  width: 590px;
+}
+.content .b-content-body .b-content-footnotes {
+  padding-top: 13px;
+  width: 300px;
+}
+.content .b-content-body .b-content-footnotes h2 { margin-bottom: 0.85em; }
+.content .b-content-body .b-content-footnotes .branch {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  line-height: 18px;
+}
+.content .b-content-body .b-content-footnotes .branch span {
+  color: #888888;
+  display: inline-block;
+  text-align: right;
+  float: right;
+}
+.content .b-content-body p {
+  margin-bottom: 20px;
+  line-height: 20px;
 }
 .new-button {
   background: url(/images/new-button.png) no-repeat;

@@ -17,6 +17,7 @@ body {
 	background: white;
 	font-family: Helvetica, Arial, serif;
 	font-size: 14px;
+	overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -40,6 +41,12 @@ h3 {
 
 .clear { clear: both; }
 .nobr { white-space: nowrap; }
+hr {
+	border: 0;
+	border-top: 1px solid #888;
+	clear: both;
+	height: 0px;
+}
 .emphasized { color: @first_main_color; }
 span.half-space {
 	font-size: 0.5em;
@@ -53,7 +60,7 @@ span.half-space {
 }
 
 .pageWrapper {
-	padding: 0 30px;
+	padding: 0px 5px 100px 34px;	
 }
 
 .header {
@@ -83,9 +90,17 @@ span.half-space {
 }
 
 .content {
-	.superForm {
-		background-color: @secondary_bg_color;
-		padding: 20px 15px;
+	width: 950px;
+
+	.superForm {		
+		position: relative;
+		margin-bottom: 68px;
+		
+		.bg {
+			background-color: @secondary_bg_color;
+			padding: 20px 15px;
+			width: 740px; // ~ 744px
+		}
 		
 		.b-picker {margin-bottom: 10px;}
 
@@ -110,7 +125,42 @@ span.half-space {
 			cursor: pointer;
 		}
 		
-		b-picker-operator { font-size: 22px; }
+		.b-picker-operator-plus {
+			margin-left: 5px;
+			margin-right: 10px;
+			margin-top: -2px;
+			height: 15px;
+			width: 16px;
+		}
+		
+		.b-picker .b-picker-operator-minus {
+			margin-right: 5px;
+			margin-top: 2px;
+			height: 5px;
+			width: 17px;
+		}		
+		
+		.b-picker-operator-minus.b-picker-operator-red {
+			background: url("/images/minus-sign-red.png") no-repeat;			
+		}
+		
+		.b-picker-operator-minus.b-picker-operator-green {
+			background: url("/images/minus-sign-green.png") no-repeat;		
+		}
+		
+		.b-picker-operator-plus.b-picker-operator-red {
+			background: url("/images/plus-sign-red.png") no-repeat;
+		}
+		
+		.b-picker-operator-plus.b-picker-operator-green {
+			background: url("/images/plus-sign-green.png") no-repeat;
+		}
+		
+		.b-picker-operator {
+			span {
+				font-size: 22px;
+			} 
+		}		
 		
 		.b-picker-amount .ui-widget-content {
 			border: #df1d5c solid 1px !important;
@@ -124,6 +174,121 @@ span.half-space {
 			position: relative;
 			width: 300px;
 		}
+		
+		label {
+			display: inline-block;
+			font-size: 18px;			
+			width: 215px;			
+		}
+		
+		.input {
+			display: inline-block;
+			position: relative;
+			top: 5px;
+			
+			.slider {
+				padding-top: 10px;
+				position: relative;
+				float: left;
+			}
+		}
+		
+		input[type="text"] {			
+			background: url("/images/bg-input-sliders.jpg") no-repeat 0 0;
+			border: 0px;
+			font-size: 90%;
+			padding: 7px 0px 0px 8px;
+			height: 20px;
+			width: 38px;
+		}
+		
+		hr {
+			margin: 15px 0px;
+		}
+		
+		.b-loan-results {
+			font-size: 18px;
+			font-style: italic;
+			margin-bottom: 20px;
+		}
+		
+		.b-actions {
+			background-color: @secondary_bg_color;
+			padding: 5px 10px;
+			position: absolute;
+			margin: 5px 295px;
+		}
+		
+		.b-ruble-guy {
+			position: absolute;
+			background: url("/images/ruble-guy.png");
+			height: 302px;
+			width: 287px;
+			top: -25px;
+			right: -25px;
+		}
+		
+		.b-star {
+			position: absolute;
+			height: 85px;
+			top: -20px;
+			width: 85px;
+		}
+		
+		.b-star-15_minutes {
+			background: url("/images/15-minutes.png");
+			right: 335px;
+		}
+		
+		.b-star-2_docs {
+			background: url("/images/only-2-docs.png");
+			right: 267px;
+		}		
+		
+	}
+	
+	.b-content-body {
+		padding-left: 20px;
+		clear: left;
+		zoom: 1;
+		
+		.b-content-main,
+		.b-content-footnotes {
+			float: left;
+			position: relative;
+			zoom: 1;
+		}
+		
+		.b-content-main {
+			margin-right: 34px;
+			width: 590px;
+		}
+		
+		.b-content-footnotes {
+			padding-top: 13px;
+			width: 300px;						
+			
+			h2 { margin-bottom: .85em; }
+			
+			.branch {
+				font-size: 12px;
+				letter-spacing: .1em;
+				line-height: 18px;
+				
+				span {				
+					color: @secondary_text_color;
+					display: inline-block;
+					text-align: right;
+					float: right;
+				}
+			}
+		} 
+				
+		p {
+			margin-bottom: 20px;
+			line-height: 20px;
+		}		
+				
 	}
 }
 

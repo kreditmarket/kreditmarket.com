@@ -8,7 +8,7 @@ function showStep(stepNo) {
     $('li#stepLink'+stepNo).addClass('selected');
 }
 
-$(document).ready(function(){	
+$(document).ready(function(){
 	var defaultAmountValue = 3000;
 	var defaultDaysValue = 10;
 	var feePercent = 0.02;
@@ -163,9 +163,9 @@ $(document).ready(function(){
 		var fees = feePerDay * daysCount;
 		var secondaryAmount = fees + parseInt(primaryAmount);
 		
-		$(".primary-count").html(primaryAmount);
-		$(".fees").html(fees);
-		$(".secondary-count").html(secondaryAmount);
+		$(".primary-count").html(primaryAmount + ' руб.');
+		$(".fees").html(fees + ' руб.');
+		$(".secondary-count").html(secondaryAmount + ' руб.');
 	};
 
 	$("#request_is_as_reg").click(function() {
