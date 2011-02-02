@@ -104,6 +104,11 @@ span.half-space {
 	font-family: Arial, sans-serif;
 	padding: 0 5px 100px 34px;
 	
+	.text-block {
+		width: 740px;
+		margin-bottom: 70px;
+	}
+	
 	.loan-conditions {
 		position: relative;
 		
@@ -114,6 +119,20 @@ span.half-space {
 		background-color: @secondary_bg_color;
 		padding: 15px 15px 10px;
 		width: 740px; // ~ 744px
+		
+		.recalc {
+			font-size: 12px;
+			font-style: normal;
+			color: @third_main_color;
+			display: inline-block;			
+			border-bottom: @third_main_color 1px dotted;
+			cursor: pointer;
+		}
+		
+		.b-loan-results {
+			display: inline-block;
+			//margin-right: 10px;
+		}
 	}
 	
 	.superForm, .loan-conditions {

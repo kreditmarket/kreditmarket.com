@@ -8,10 +8,17 @@ function showStep(stepNo) {
     $('li#stepLink'+stepNo).addClass('selected');
 }
 
-$(document).ready(function(){
+$(document).ready(function() {
 	$("#submit").click(function() {
 		$("#step-1").hide();
 		$("#step-2").show();
+		
+		return false;
+	});
+	
+	$("span.recalc").click(function() {
+		$("#step-1").show();
+		$("#step-2").hide();
 		
 		return false;
 	});
@@ -35,7 +42,7 @@ $(document).ready(function(){
 		value: defaultAmountValue,
 		min: 1000,
 		max: 10000,
-		step: 100,
+		step: 1000,
 		slide: function(event, ui){
 			var amount = ui.value;
 			$("body").find("#request_amount").attr('value', amount);

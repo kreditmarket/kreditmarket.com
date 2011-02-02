@@ -218,6 +218,10 @@ span.half-space {
   font-family: Arial, sans-serif;
   padding: 0 5px 100px 34px;
 }
+.content .text-block {
+  width: 740px;
+  margin-bottom: 70px;
+}
 .content .loan-conditions {
   position: relative;
   font-size: 18px;
@@ -227,6 +231,15 @@ span.half-space {
   padding: 15px 15px 10px;
   width: 740px;
 }
+.content .loan-conditions .recalc {
+  font-size: 12px;
+  font-style: normal;
+  color: #2576d2;
+  display: inline-block;
+  border-bottom: #2576d2 1px dotted;
+  cursor: pointer;
+}
+.content .loan-conditions .b-loan-results { display: inline-block; }
 .content .superForm .b-loan-results .primary-count { color: #df1d5c; }
 .content .superForm .b-loan-results .fees { color: #6cba33; }
 .content .superForm .b-loan-results .secondary-count { color: #2576d2; }
