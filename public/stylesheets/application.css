@@ -143,7 +143,7 @@ body {
   font-size: 14px;
   overflow-x: hidden;
 }
-h1, h2, h3 { font-family: 'Arial black', Gadget, sans-serif; }
+h1, h2, h3 { font-family: Arial, sans-serif; }
 h1 {
   font-size: 24px;
   margin-bottom: 0.7em;
@@ -212,7 +212,11 @@ span.half-space {
   font-size: 84%;
   vertical-align: top;
 }
-.header .phone .number { font-size: 104%; }
+.header .phone .number {
+  font-family: Georgia, serif;
+  font-size: 115%;
+  font-style: italic;
+}
 .content {
   width: 950px;
   font-family: Arial, sans-serif;
@@ -382,7 +386,6 @@ span.half-space {
 .content .b-content-body .b-content-footnotes h2 { margin-bottom: 0.85em; }
 .content .b-content-body .b-content-footnotes .branch {
   font-size: 12px;
-  letter-spacing: 0.1em;
   line-height: 18px;
 }
 .content .b-content-body .b-content-footnotes .branch span {
