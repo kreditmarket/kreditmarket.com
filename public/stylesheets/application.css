@@ -126,6 +126,17 @@ form.simple_form .boolean label {
   margin-right: 15px;
   margin-left: 5px;
 }
+form.simple_form .inline .input { display: inline-block; }
+form.simple_form .small { display: inline-block; }
+form.simple_form #request_doc_seria { width: 40px; }
+form.simple_form #request_doc_number { width: 195px; }
+form.simple_form #request_reg_house { width: 65px; }
+form.simple_form #request_reg_flat { width: 65px; }
+form.simple_form #request_fact_house { width: 65px; }
+form.simple_form #request_fact_flat { width: 65px; }
+form.simple_form #request_reg_building { width: 80px; }
+form.simple_form #request_fact_building { width: 80px; }
+html, body { height: 100%; }
 body {
   background: white;
   font-family: Helvetica, Arial, serif;
@@ -164,11 +175,16 @@ span.half-space {
   background: url("/images/top-line.png") no-repeat 0 0;
   margin: 0px auto;
   width: 1000px;
-  min-height: 0px;
-  padding-bottom: 120px;
-  position: relative;
+  min-height: 100%;
+  height: 100%;
+  height: auto !important;
+  margin-bottom: -100px;
 }
-.pageWrapper { padding: 0px 5px 100px 34px; }
+.pageWrapper {
+  position: relative;
+  min-width: 1000px;
+}
+.pageWrapper #step-2 { display: none; }
 .header {
   margin-right: -60px;
   padding: 30px 0 53px 0;
@@ -197,7 +213,26 @@ span.half-space {
   vertical-align: top;
 }
 .header .phone .number { font-size: 104%; }
-.content { width: 950px; }
+.content {
+  width: 950px;
+  font-family: Arial, sans-serif;
+  padding: 0 5px 100px 34px;
+}
+.content .loan-conditions {
+  position: relative;
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 40px;
+  background-color: #e1e1e1;
+  padding: 15px 15px 10px;
+  width: 740px;
+}
+.content .superForm .b-loan-results .primary-count { color: #df1d5c; }
+.content .superForm .b-loan-results .fees { color: #6cba33; }
+.content .superForm .b-loan-results .secondary-count { color: #2576d2; }
+.content .loan-conditions .b-loan-results .primary-count { color: #df1d5c; }
+.content .loan-conditions .b-loan-results .fees { color: #6cba33; }
+.content .loan-conditions .b-loan-results .secondary-count { color: #2576d2; }
 .content .superForm {
   position: relative;
   margin-bottom: 68px;
@@ -291,7 +326,7 @@ span.half-space {
   background: url("/images/ruble-guy.png");
   height: 302px;
   width: 287px;
-  top: -25px;
+  top: -16px;
   right: -25px;
 }
 .content .superForm .b-star {
@@ -347,6 +382,73 @@ span.half-space {
   margin-bottom: 20px;
   line-height: 20px;
 }
+.content .loan-details { padding-left: 20px; }
+.content .b-form-navigation { margin: 45px 0px 35px 0px; }
+.content .b-form-navigation li {
+  list-style-type: none;
+  display: inline-block;
+  background: url("/images/step-default.png") no-repeat 0% 0%;
+  height: 36px;
+  padding: 8px 0px 0px 14px;
+  margin: 0px;
+  color: #888888;
+  cursor: pointer;
+}
+.content .b-form-navigation li em {
+  font-size: 18px;
+  padding-right: 14px;
+}
+.content .b-form-navigation li .arrow {
+  padding-left: 20px;
+  background: url("/images/arrow.png") no-repeat 3px 5px;
+  color: #888888;
+  width: 22px;
+  height: 9px;
+}
+.content .b-form-navigation .selected {
+  background: url("/images/step-active.png") no-repeat 0% 0%;
+  color: #212121;
+}
+.content .b-form-navigation .selected em { color: #6cba33; }
+.content .b-form-sheet {
+  display: none;
+  padding-bottom: 0px;
+  margin-right: -30px;
+}
+.content .b-form-sheet .l-column { margin-right: 30px; }
+.content .b-form-sheet:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0px;
+  line-height: 0;
+  visibility: hidden;
+}
+.content .b-form-sheet.selected { display: block; }
+.content .l-column {
+  float: left;
+  margin-right: 60px;
+}
+.content .important {
+  display: block;
+  color: #df1d5c;
+  background: url("/images/important.png") no-repeat 0 0;
+  padding: 0px 0px 20px 17px;
+  margin-top: 20px;
+  font-style: italic;
+  width: 400px;
+}
+.content button { cursor: pointer; }
+.footer {
+  background: url("/images/bottom-line.png") no-repeat left bottom;
+  clear: both;
+  height: 100px;
+  margin-top: -100px;
+  position: relative;
+  z-index: 1;
+  margin: 0px auto;
+  width: 1000px;
+}
 .new-button {
   background: url(/images/new-button.png) no-repeat;
   display: -moz-inline-stack;
@@ -380,7 +482,7 @@ span.half-space {
   font-size: 22px;
   color: #212121;
 }
-.new-button-small button {
+.new-button-small div {
   background: url(/images/new-button-small.png) no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
@@ -388,14 +490,17 @@ span.half-space {
   color: #212121;
 }
 .new-button-small { margin-right: 3px; }
-.new-button-small button {
+.new-button-small div {
   border: 0;
   margin: 0;
-  padding: 0 12px 0 9px;
+  padding: 5px 12px 0 9px;
   position: relative;
   left: 3px;
   height: 38px;
   line-height: 22px;
   background-position: top right;
   white-space: nowrap;
+  cursor: pointer;
 }
+.buttons { margin-right: -350px; }
+.buttons .new-button-small { margin-right: 350px; }

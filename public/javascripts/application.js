@@ -9,14 +9,28 @@ function showStep(stepNo) {
 }
 
 $(document).ready(function(){
+	$("#submit").click(function() {
+		$("#step-1").hide();
+		$("#step-2").show();
+		
+		return false;
+	});
+	
+	$(".b-form-button-submit").click(function() {
+		$(this).closest("form").submit();
+	});
+	
 	var defaultAmountValue = 3000;
 	var defaultDaysValue = 10;
 	var feePercent = 0.02;
+	
+	// Setting hidden fields default value
+	$("body").find("#request_amount").attr('value', defaultAmountValue);
+	$("body").find("#request_days").attr('value', defaultDaysValue);
 		
 	/***
 	// Money
-	***/
-	$("#request_amount").attr('value', '3000');
+	***/	
 	$("#data-picker-amount").slider({
 		value: defaultAmountValue,
 		min: 1000,
@@ -24,7 +38,7 @@ $(document).ready(function(){
 		step: 100,
 		slide: function(event, ui){
 			var amount = ui.value;
-			$("#request_amount").attr('value', amount);
+			$("body").find("#request_amount").attr('value', amount);
 			
 			recalculate();
 		}
@@ -39,7 +53,7 @@ $(document).ready(function(){
 		var amount = value - step;
 		
 		amountSlider.slider("option", "value", amount);
-		$("#request_amount").attr('value', amount);
+		$("body").find("#request_amount").attr('value', amount);
 		
 		recalculate();
 	});
@@ -52,13 +66,14 @@ $(document).ready(function(){
 		var amount = value + step;
 		
 		amountSlider.slider("option", "value", amount);
-		$("#request_amount").attr('value', amount);
+		$("body").find("#request_amount").attr('value', amount);
 		
 		recalculate();
 	});
 	
 	$("#request_amount").change(function(){
 		var Slider = $("#data-picker-amount");
+		$("body").find("#request_amount").attr('value', $(this).val());
 		
 		if ($(this).val() > 10000) {
 			alert("Сумма займа не может превышать десяти тысяч рублей.");
@@ -94,7 +109,7 @@ $(document).ready(function(){
 		step: 1,
 		slide: function(event, ui){
 			var amount = ui.value;
-			$("#request_days").attr('value', amount);
+			$("body").find("#request_days").attr('value', amount);
 			
 			recalculate();
 		}
@@ -109,7 +124,7 @@ $(document).ready(function(){
 		var amount = value - step;
 		
 		amountSlider.slider("option", "value", amount);
-		$("#request_days").attr('value', amount);
+		$("body").find("#request_days").attr('value', amount);
 		
 		recalculate();
 	});
@@ -122,13 +137,14 @@ $(document).ready(function(){
 		var amount = value + step;
 		
 		amountSlider.slider("option", "value", amount);
-		$("#request_days").attr('value', amount);
+		$("body").find("#request_days").attr('value', amount);
 		
 		recalculate();
 	});
 	
 	$("#request_days").change(function(){
 		var Slider = $("#data-picker-days");
+		$("body").find("#request_days").attr('value', $(this).val());
 					
 		if ($(this).val() > 16) {
 			alert("Займ не выдается на срок более чем 16 дней.");

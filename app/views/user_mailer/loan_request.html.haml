@@ -2,6 +2,11 @@
   Сумма займа:
   = succeed " руб." do
     = @request.amount
+
+%h2 
+  Срок займа:
+  = succeed " дней" do
+    = @request.days
    
 
 %div
@@ -133,7 +138,7 @@
     = @request.fact_period
     %br/
   - unless @request.fact_st_phone.nil? or @request.fact_st_phone.empty?
-    %span Дом. телефон:  
+    %span Телефон:  
     = @request.fact_st_phone
     %br/
   - unless @request.fact_mob_phone.nil? or @request.fact_mob_phone.empty?
