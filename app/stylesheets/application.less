@@ -107,6 +107,7 @@ span.half-space {
 	width: 950px;
 	font-family: Arial, sans-serif;
 	padding: 0 5px 100px 34px;
+	margin-bottom: 35px;
 	
 	.text-block {
 		width: 740px;
@@ -418,6 +419,7 @@ span.half-space {
 
 .footer {
 	background: url("/images/bottom-line.png") no-repeat left bottom;	
+	border-top: @secondary_text_color 1px solid;
 	clear: both;
 	height: 100px;
 	margin-top: -100px;
@@ -425,6 +427,23 @@ span.half-space {
 	z-index: 1;
 	margin: 0px auto;
 	width: 1000px;
+	
+	.l-column {
+		font-size: 13px;
+		padding-top: 20px;
+	}
+	
+	.l-column-left {		
+		float: left;
+		margin-left: 34px;
+		width: 254px;		
+	}
+	
+	.l-column-right {		
+		float: right;
+		margin-right: 5px;
+		width: 175px;		
+	}
 }
 
 .new-button, .new-button button {

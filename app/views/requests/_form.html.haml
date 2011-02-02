@@ -30,8 +30,8 @@
         = f.input :personal_first_name, :label => "Имя", :required => false
         = f.input :personal_surname, :label => "Отчество", :required => false
         = f.input :personal_birth_place, :label => "Место рождения", :hint => "Как указано в паспорте."  
-        = f.input :personal_birth_date, :as => :date, :start_year => Date.today.year - 90,
-                                :end_year => Date.today.year - 6,
+        = f.input :personal_birth_date, :as => :date, :start_year => Date.today.year - 65,
+                                :end_year => Date.today.year - 21,
                                 :order => [:day, :month, :year], :label => "Дата рождения" 
       .l-column        
         = f.input :personal_relationship_status, :label => "Семейный статус"
