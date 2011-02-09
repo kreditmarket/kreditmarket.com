@@ -397,6 +397,11 @@ span.half-space {
   float: right;
 }
 .content .b-content-body .b-content-footnotes .branch .addr { font-style: italic; }
+.content .b-content-body .b-affiliate-button {
+  position: relative;
+  margin-top: 30px;
+}
+.content .b-content-body .b-affiliate-button h3 { margin-bottom: 5px; }
 .content .b-content-body p {
   margin-bottom: 20px;
   line-height: 20px;

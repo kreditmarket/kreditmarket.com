@@ -29,9 +29,8 @@
       .l-column.l-column-left
         Тел.: (846) 997-15-55, +7 927 606-31-85 
         %br/
-        Электропочта: magazinkreditov@mail.ru
-        %br/
-        = link_to 'Партнерская программа', page_path("affiliate")      
+        Электропочта:
+        = mail_to 'magazinkreditov@mail.ru'
       .l-column.l-column-right
         © 
         = Time.new.year
