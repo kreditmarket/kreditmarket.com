@@ -39,6 +39,7 @@ GEM
     erubis (2.6.6)
       abstract (>= 1.0.0)
     haml (3.0.25)
+    high_voltage (0.9.3)
     highline (1.6.1)
     i18n (0.5.0)
     less (1.2.21)
@@ -93,6 +94,7 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   haml
+  high_voltage
   less
   mysql2
   rails (= 3.0.3)

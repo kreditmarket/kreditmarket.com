@@ -536,3 +536,28 @@ span.half-space {
 }
 .buttons { margin-right: -350px; }
 .buttons .new-button-small { margin-right: 350px; }
+.b-article {
+  position: relative;
+  width: 77%;
+}
+.b-article h1 { font-size: 26px; }
+.b-article .lid {
+  color: #666666;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.b-article p {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 16px;
+}
+.b-article li { list-style-type: decimal; }
+.b-article .b-list-header {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 9px;
+  color: #df1d5c;
+}
