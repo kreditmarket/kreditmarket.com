@@ -388,13 +388,15 @@ span.half-space {
 .content .b-content-body .b-content-footnotes .branch {
   font-size: 12px;
   line-height: 18px;
+  margin-bottom: 14px;
 }
-.content .b-content-body .b-content-footnotes .branch span {
+.content .b-content-body .b-content-footnotes .branch .time {
   color: #888888;
   display: inline-block;
   text-align: right;
   float: right;
 }
+.content .b-content-body .b-content-footnotes .branch .addr { font-style: italic; }
 .content .b-content-body p {
   margin-bottom: 20px;
   line-height: 20px;
