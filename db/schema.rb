@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110209130117) do
+ActiveRecord::Schema.define(:version => 20110209130917) do
 
   create_table "requests", :force => true do |t|
     t.string   "personal_last_name"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20110209130117) do
     t.string   "second_cont_per_first_name"
     t.string   "second_cont_per_mob_phone"
     t.integer  "days"
-    t.integer  "agent_code"
+    t.string   "agent_code"
   end
 
 end

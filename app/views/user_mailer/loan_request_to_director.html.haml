@@ -45,6 +45,10 @@
     %span Количество иждевенцев:  
     = @request.personal_izhd_count
     %br/
+  - unless @request.agent_code.nil?
+    %span Код агента:  
+    = @request.agent_code
+    %br/
 %br/
 %br/
 
