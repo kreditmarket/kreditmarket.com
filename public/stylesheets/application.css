@@ -548,6 +548,17 @@ span.half-space {
   width: 77%;
 }
 .b-article h1 { font-size: 26px; }
+.b-article h2 {
+  margin-top: 1.6em;
+  margin-bottom: 1em;
+}
+.b-article .b-map {
+  padding: 7px;
+  background-color: #f5f5ea;
+  position: relative;
+  width: 575px;
+  zoom: 1;
+}
 .b-article .lid {
   color: #666666;
   font-size: 18px;

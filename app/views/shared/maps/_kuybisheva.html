@@ -1,0 +1,42 @@
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту  (начало) -->
+<script src="http://api-maps.yandex.ru/1.1/?key=AJ4yYk0BAAAAnidlCQIAElmfj5YlPTUZtwmCQnhxqlpkg_IAAAAAAAAAAAA4gCUSNgSBn01D-tiFBn825WLWcA==&modules=pmap&wizard=constructor" type="text/javascript"></script>
+<script type="text/javascript">
+    YMaps.jQuery(window).load(function () {
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-07")[0]);
+        map.setCenter(new YMaps.GeoPoint(50.089264,53.188233), 16, YMaps.MapType.MAP);
+        map.addControl(new YMaps.Zoom());
+        map.addControl(new YMaps.ToolBar());
+        YMaps.MapType.PMAP.getName = function () { return "Народная"; };
+        map.addControl(new YMaps.TypeControl([
+            YMaps.MapType.MAP,
+            YMaps.MapType.SATELLITE,
+            YMaps.MapType.HYBRID,
+            YMaps.MapType.PMAP
+        ], [0, 1, 2, 3]));
+
+        YMaps.Styles.add("constructor#pmrdmPlacemark", {
+            iconStyle : {
+                href : "http://api-maps.yandex.ru/i/0.3/placemarks/pmrdm.png",
+                size : new YMaps.Point(28,29),
+                offset: new YMaps.Point(-8,-27)
+            }
+        });
+
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(50.087826,53.186918), "constructor#pmrdmPlacemark", "Магазин Кредитов"));
+        
+        function createObject (type, point, style, description) {
+            var allowObjects = ["Placemark", "Polyline", "Polygon"],
+                index = YMaps.jQuery.inArray( type, allowObjects),
+                constructor = allowObjects[(index == -1) ? 0 : index];
+                description = description || "";
+            
+            var object = new YMaps[constructor](point, {style: style, hasBalloon : !!description});
+            object.description = description;
+            
+            return object;
+        }
+    });
+</script>
+
+<div id="YMapsID-07" style="width:575px;height:415px"></div>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
