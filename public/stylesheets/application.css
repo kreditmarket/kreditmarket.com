@@ -545,7 +545,9 @@ span.half-space {
 .buttons .new-button-small { margin-right: 350px; }
 .b-article {
   position: relative;
-  width: 77%;
+  width: 70%;
+  line-height: 1.4;
+  float: left;
 }
 .b-article h1 { font-size: 26px; }
 .b-article h2 {
@@ -568,7 +570,6 @@ span.half-space {
 }
 .b-article p {
   font-size: 14px;
-  line-height: 16px;
   margin-bottom: 16px;
 }
 .b-article li { list-style-type: decimal; }
@@ -578,4 +579,38 @@ span.half-space {
   font-weight: bold;
   margin-top: 9px;
   color: #df1d5c;
+}
+.b-sidebar {
+  position: relative;
+  float: left;
+  width: 27%;
+  padding-left: 10px;
+  font-size: 0.845em;
+}
+.b-sidebar .userbar {
+  background-color: #f7eec6;
+  display: block;
+  line-height: 1.4;
+  margin-top: 20px;
+  padding: 7px 0px 7px 19px;
+  position: relative;
+  zoom: 1;
+  background: #ffffff;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #eeeeee;
+  -moz-box-shadow: 0 0 6px #cccccc;
+  -webkit-box-shadow: 0 0 6px #cccccc;
+  box-shadow: 0 0 6px #cccccc;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#cccccc')";
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#cccccc);
+}
+.b-sidebar .userbar a { color: #df1d5c; }
+.b-sidebar .userbar a:link { color: #df1d5c; }
+.b-sidebar .userbar a:hover { color: #df1d5c; }
+.b-sidebar .userbar a:visited { color: #df1d5c; }
+.b-sidebar .userbar h2 {
+  font-size: 1.142em;
+  margin-bottom: 0.5625em;
 }
