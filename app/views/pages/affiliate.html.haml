@@ -27,10 +27,24 @@
         После одобрения первых пяти заемщиков, которых вы найдете, сможете получить свое вознаграждение удобным для вас способом.
 .b-sidebar
   .userbar
-    %h2 Уже зарегистрировались как агент?
-    = succeed "." do
-      = link_to 'Войти', sign_in_path
-    Еще нет?
-    = link_to 'Регистрация', sign_up_path
-    займет полминуты.
+    #signin{:class => "userbar-layer"}
+      %h2 Вход для агентов
+      = simple_form_for :session, :url => session_path do |f|
+        .inputs
+          = f.input :email, :label => "Электропочта", :required => false
+          = f.input :password, :as => :password, :label => "Пароль", :required => false
+          = f.input :remember_me, :as => :boolean, :label => "запомнить меня"
+        .buttons
+          = f.submit 'Войти'
+      = link_to 'Зарегистрироваться', '#', :class => "signup-signin"
+    #signup{:class => "userbar-layer"}
+      %h2 Регистрация
+      = simple_form_for @user do |f|
+        .inputs
+          = f.input :email, :label => "Электропочта", :required => false
+          = f.input :password, :as => :password, :label => "Пароль", :required => false
+          = f.input :password_confirmation, :as => :password, :label => "Еще раз", :required => false
+        .buttons
+          = f.submit 'Зарегистрироваться' 
+      = link_to 'Войти', '#', :class => "signup-signin"
 .clear

@@ -9,6 +9,10 @@ function showStep(stepNo) {
 }
 
 $(document).ready(function() {
+	$(".signup-signin").click(function() {
+		$(".userbar-layer").toggle();
+	});
+	
 	$("#submit").click(function() {
 		$("#step-1").hide();
 		$("#step-2").show();

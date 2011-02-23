@@ -2,6 +2,7 @@ KreditmarketCom::Application.routes.draw do
   get "home/index"
 
   resources :requests
+  resources :pages
   
   root :to => "home#index"
 

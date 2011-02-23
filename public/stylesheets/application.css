@@ -610,7 +610,14 @@ span.half-space {
 .b-sidebar .userbar a:link { color: #df1d5c; }
 .b-sidebar .userbar a:hover { color: #df1d5c; }
 .b-sidebar .userbar a:visited { color: #df1d5c; }
+.b-sidebar .userbar a {
+  border-bottom: dashed 1px #df1d5c;
+  text-decoration: none;
+}
 .b-sidebar .userbar h2 {
   font-size: 1.142em;
   margin-bottom: 0.5625em;
 }
+.b-sidebar .userbar input { width: 175px !important; }
+.b-sidebar .userbar #signin { display: block; }
+.b-sidebar .userbar #signup { display: none; }

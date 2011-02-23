@@ -587,12 +587,29 @@ span.half-space {
         filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color=#cccccc); /* IE <= 7 */
 		
 		a, a:link, a:hover, a:visited {
-			color: @first_main_color;
+			color: @first_main_color;			
+		}
+		
+		a {
+			border-bottom: dashed 1px @first_main_color;
+			text-decoration: none;
 		}
 		
 		h2 {
 			font-size: 1.142em;
 			margin-bottom: .5625em;
+		}
+		
+		input {
+			width: 175px !important;
+		}
+		
+		#signin {
+			display: block;
+		}
+		
+		#signup {
+			display: none;
 		}
 	}
 }
