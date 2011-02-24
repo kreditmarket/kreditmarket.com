@@ -11,7 +11,3 @@ gem 'clearance'
 gem 'mysql2'
 
 gem 'capistrano'
-
-group :development, :test do
-	gem 'mysql'
-end
