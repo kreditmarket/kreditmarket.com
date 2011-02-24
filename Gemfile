@@ -7,10 +7,13 @@ gem 'high_voltage'
 gem 'less'
 gem 'simple_form'
 gem 'russian'
-gem 'mysql2'
 gem 'clearance'
+group :production do
+	gem 'mysql2'
+end
 
 gem 'capistrano'
 
-# group :development, :test do
-# end
+group :development, :test do
+	gem 'mysql'
+end

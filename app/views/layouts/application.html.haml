@@ -24,6 +24,10 @@
           .clear
             
         .content
+          #flashes
+            - flash.each do |key, value|
+              #flash
+                = html_escape(value)
           = yield
           
     .footer      

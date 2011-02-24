@@ -1,0 +1,8 @@
+- title "Забыли пароль?"
+
+%h1 Восстановление пароля
+
+= simple_form_for :password, :url => passwords_path do |f|
+  = f.input :email, :label => "Электронная почта", :hint => "Мы отправим вам письмо с инструкциями по восстановлению пароля.", :required => false
+  %span.new-button-small
+    %button{:class => "b-form-button"}#submit Восстановить

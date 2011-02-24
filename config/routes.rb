@@ -3,6 +3,7 @@ KreditmarketCom::Application.routes.draw do
 
   resources :requests
   resources :pages
+  resources :users
   
   root :to => "home#index"
 

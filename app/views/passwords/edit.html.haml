@@ -1,0 +1,11 @@
+- title "Смена пароля"
+
+%h1 Восстановление пароля
+
+= simple_form_for(:user,
+            :url  => user_password_path(@user, :token => @user.confirmation_token),
+            :html => { :method => :put }) do |f|
+  = f.input :password, :as => :password, :label => "Пароль", :required => false
+  = f.input :password_confirmation, :as => :password, :label => "Еще раз", :required => false
+  %span.new-button-small
+    %button{:class => "b-form-button"}#submit Сменить пароль

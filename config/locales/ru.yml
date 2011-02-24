@@ -100,6 +100,19 @@ ru:
         
       full_messages:
         format: "%{attribute} %{message}"  
+        
+  clearance:
+    signed_in: ""
+    signed_out: ""
+    controllers:
+      users:
+        deliver_confirmation: "Регистрация прошла успешно! На ваш адрес выслано письмо со ссылкой для подтверждения аккаунта."
+      sessions:
+        bad_email_or_password: "Неправильные адрес электронной почты или пароль."
+      passwords:
+        forbidden: "Проверьте еще раз URL и повторите попытку."
+        deliver_change_password: "Вы получите письмо в течение нескольких минут. В нем указаны дальнейшие инструкции для смены пароля."
+        unknown_email: "Мы не нашли такого адреса электронной почты."
       
   app:
     back: "Назад"
@@ -108,8 +121,6 @@ ru:
       requests:
         create: "Заявка успешно сохранена и отправлена на рассмотрение."
         
-    
-    clearance:
       login:
         anchor: "Войти"
         title: "Вход на сайт"
@@ -117,7 +128,6 @@ ru:
         anchor: "Выйти"
       signup:
         title: "Регистрация"
-    
     requests:
       no_new_requests: "Новых заявок нет"
       fields:

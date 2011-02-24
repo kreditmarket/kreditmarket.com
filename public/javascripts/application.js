@@ -10,10 +10,16 @@ function showStep(stepNo) {
 
 $(document).ready(function() {
 	$(".overlay_wrapper > input").focusin(function() {
-		$(this).closest("label").addClass("focus");
+		$("label[for="+ this.id +"]").addClass("focus");
 	})
-	.focusout(function() {
-		$(this).closest("label").removeClass("focus");
+	.blur(function() {
+		if (this.value == "") {
+			$("label[for="+ this.id +"]").removeClass("focus").show();
+		}		
+	})
+	.keypress(function() {
+		if (event.keyCode == Event.KEY_TAB) return;
+		$("label[for="+ this.id +"]").hide();
 	});
 	
 	$(".signup-signin").click(function() {
