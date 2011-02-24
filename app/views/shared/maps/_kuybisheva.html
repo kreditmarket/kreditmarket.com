@@ -2,8 +2,8 @@
 <script src="http://api-maps.yandex.ru/1.1/?key=AJ4yYk0BAAAAnidlCQIAElmfj5YlPTUZtwmCQnhxqlpkg_IAAAAAAAAAAAA4gCUSNgSBn01D-tiFBn825WLWcA==&modules=pmap&wizard=constructor" type="text/javascript"></script>
 <script type="text/javascript">
     YMaps.jQuery(window).load(function () {
-        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-07")[0]);
-        map.setCenter(new YMaps.GeoPoint(50.089264,53.188233), 16, YMaps.MapType.MAP);
+        var map = new YMaps.Map(YMaps.jQuery("#YMapsID-3641")[0]);
+        map.setCenter(new YMaps.GeoPoint(50.087236,53.184549), 16, YMaps.MapType.MAP);
         map.addControl(new YMaps.Zoom());
         map.addControl(new YMaps.ToolBar());
         YMaps.MapType.PMAP.getName = function () { return "Народная"; };
@@ -22,7 +22,7 @@
             }
         });
 
-       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(50.087826,53.186918), "constructor#pmrdmPlacemark", "Магазин Кредитов"));
+       map.addOverlay(createObject("Placemark", new YMaps.GeoPoint(50.087257,53.184497), "constructor#pmrdmPlacemark", "Магазин Кредитов"));
         
         function createObject (type, point, style, description) {
             var allowObjects = ["Placemark", "Polyline", "Polygon"],
@@ -38,5 +38,5 @@
     });
 </script>
 
-<div id="YMapsID-07" style="width:575px;height:415px"></div>
+<div id="YMapsID-3641" style="width:575px;height:415px"></div>
 <!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
