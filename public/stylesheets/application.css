@@ -207,6 +207,10 @@ span.half-space {
 }
 .header .address { top: 42px; }
 .header .phone { top: 42px; }
+.header .address span {
+  display: block;
+  margin: 3px 0px 5px 0px;
+}
 .header .phone .code {
   color: #888888;
   font-size: 84%;
