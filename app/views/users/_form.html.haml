@@ -1,0 +1,7 @@
+= simple_form_for @user do |f|
+    = f.input :email, :label => "Электропочта", :required => false
+    = f.input :first_name, :label => "Имя", :required => false
+    = f.input :last_name, :label => "Фамилия", :required => false
+    = f.input :password, :label => "Пароль", :required => false
+    = f.input :password_confirmation, :as => :password, :label => "Еще раз", :required => false
+    = f.submit 'Зарегистрироваться'

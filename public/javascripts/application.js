@@ -9,6 +9,13 @@ function showStep(stepNo) {
 }
 
 $(document).ready(function() {
+	$(".overlay_wrapper > input").focusin(function() {
+		$(this).closest("label").addClass("focus");
+	})
+	.focusout(function() {
+		$(this).closest("label").removeClass("focus");
+	});
+	
 	$(".signup-signin").click(function() {
 		$(".userbar-layer").toggle();
 	});

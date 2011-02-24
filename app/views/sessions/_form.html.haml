@@ -1,0 +1,5 @@
+= simple_form_for :session, :url => session_path do |f|
+  = f.input :email, :label => "Электропочта", :required => false
+  = f.input :password, :as => :password, :label => "Пароль", :required => false
+  = f.input :remember_me, :as => :boolean, :label => "запомнить меня"
+  = f.submit 'Войти'
