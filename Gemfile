@@ -8,9 +8,7 @@ gem 'less'
 gem 'simple_form'
 gem 'russian'
 gem 'clearance'
-group :production do
-	gem 'mysql2'
-end
+gem 'mysql2'
 
 gem 'capistrano'
 
