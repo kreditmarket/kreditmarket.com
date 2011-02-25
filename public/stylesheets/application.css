@@ -248,7 +248,7 @@ span.half-space {
   float: left;
   margin-right: 60px;
 }
-.header .address {
+.header .logo2 {
   position: relative;
   float: left;
   margin-right: 60px;
@@ -258,8 +258,8 @@ span.half-space {
   float: left;
   margin-right: 60px;
 }
-.header .address { top: 42px; }
-.header .phone { top: 42px; }
+.header .logo2 { top: 42px; }
+.header .phone { top: 29px; }
 .header .address span {
   display: block;
   margin: 3px 0px 5px 0px;
@@ -274,6 +274,7 @@ span.half-space {
   font-size: 115%;
   font-style: italic;
 }
+.header .phone .address { margin-top: 15px; }
 .header .user-bar {
   position: absolute;
   display: block;
