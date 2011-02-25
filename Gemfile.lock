@@ -56,8 +56,6 @@ GEM
     mutter (0.5.3)
     mysql (2.8.1)
     mysql (2.8.1-x86-mingw32)
-    mysql2 (0.2.6)
-    mysql2 (0.2.6-x86-mingw32)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -104,7 +102,6 @@ DEPENDENCIES
   high_voltage
   less
   mysql
-  mysql2
   rails (= 3.0.3)
   russian
   simple_form

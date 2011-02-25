@@ -101,14 +101,23 @@ ru:
       full_messages:
         format: "%{attribute} %{message}"  
         
-  clearance:
-    signed_in: ""
-    signed_out: ""
+  signed_in: ""
+  signed_out: ""
+  
+  clearance:    
+    models:
+      clearance_mailer:
+        change_password: "Смена пароля"
+        confirmation: "Подтверждение аккаунта"
     controllers:
+      confirmations:
+        confirmed_email: "Подтверждение прошло успешно."
+        already_confirmed_email: "Аккаунт уже подтвержден."
       users:
         deliver_confirmation: "Регистрация прошла успешно! На ваш адрес выслано письмо со ссылкой для подтверждения аккаунта."
       sessions:
         bad_email_or_password: "Неправильные адрес электронной почты или пароль."
+        unconfirmed_email: "Аккаунт еще не подтвержден. Вам отправлено письмо со ссылкой."
       passwords:
         forbidden: "Проверьте еще раз URL и повторите попытку."
         deliver_change_password: "Вы получите письмо в течение нескольких минут. В нем указаны дальнейшие инструкции для смены пароля."

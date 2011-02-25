@@ -4,6 +4,7 @@ KreditmarketCom::Application.routes.draw do
   resources :requests
   resources :pages
   resources :users
+  resource :session, :controller => "sessions"
   
   root :to => "home#index"
 
