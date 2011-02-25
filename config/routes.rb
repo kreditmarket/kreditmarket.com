@@ -6,6 +6,8 @@ KreditmarketCom::Application.routes.draw do
   resources :users
   resource :session, :controller => "sessions"
   
+  match 'sign_out' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
+  
   root :to => "home#index"
 
   # The priority is based upon order of creation:

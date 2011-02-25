@@ -101,8 +101,8 @@ ru:
       full_messages:
         format: "%{attribute} %{message}"  
         
-  signed_in: ""
-  signed_out: ""
+  signed_in: "Вы успешно вошли в систему."
+  signed_out: "Вы успешно вышли из системы."
   
   clearance:    
     models:
