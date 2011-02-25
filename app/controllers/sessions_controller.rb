@@ -1,6 +1,6 @@
 class SessionsController < Clearance::SessionsController
 	def url_after_create
-		current_user
+		profile_url
 	end
 	
 	def url_after_destroy

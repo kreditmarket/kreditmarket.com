@@ -270,6 +270,40 @@ span.half-space {
   font-size: 115%;
   font-style: italic;
 }
+.header .user-bar {
+  position: absolute;
+  display: block;
+  left: 17px;
+  top: 160px;
+  font-size: 13px;
+  margin-top: 7px;
+  padding-right: 1.3em;
+  background-color: #f5f5ea;
+}
+.header .user-bar ol {
+  margin: 0;
+  padding: 0;
+}
+.header .user-bar .email {
+  display: inline-block;
+  margin: 0.5em 0 -0.5em 1.3em;
+  position: relative;
+}
+.header .user-bar .email small {
+  font-size: 11px;
+  font-weight: bold;
+}
+.header .user-bar a { font-weight: bold; }
+.header .user-bar a:visited { color: black; }
+.header .user-bar a:link { color: black; }
+.header .user-bar a:hover {
+  color: white;
+  background-color: black;
+}
+.header .user-bar li {
+  list-style-type: none;
+  display: inline-block;
+}
 .content {
   width: 950px;
   font-family: Arial, sans-serif;

@@ -6,6 +6,9 @@ KreditmarketCom::Application.routes.draw do
   resources :users
   resource :session, :controller => "sessions"
   
+  match "profile" => 'users#show', :as => "profile"
+  match "settings" => 'users#edit', :as => "settings"
+  
   match 'sign_out' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
   
   root :to => "home#index"

@@ -21,6 +21,12 @@
             %br/
             %span.nobr
               %span.number +7 927 606-31-85
+          - if signed_in?
+            .user-bar
+              %ol
+                %li= link_to_unless_current "Личный кабинет", profile_path
+                %li= link_to_unless_current "Настройки", settings_path
+                %li= link_to 'Выйти', sign_out_path, :method => :delete
           .clear
             
         .content
