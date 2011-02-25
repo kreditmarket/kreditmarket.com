@@ -13,4 +13,11 @@ class User < ActiveRecord::Base
     self.first_name = split.last
     self.last_name = split.first
   end
+  
+	def random_string(length=5)
+		chars = 'abcdefghjkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+		password = ''
+		length.times { password << chars[rand(chars.size)] }
+		password
+	end
 end

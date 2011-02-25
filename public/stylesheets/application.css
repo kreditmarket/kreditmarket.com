@@ -723,6 +723,26 @@ span.half-space {
   margin: 15px 0px 30px 0px;
 }
 .b-profile-page .email { font-style: italic; }
+.b-profile-page .b-content .b-item {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 1.5em 2.4em 0 0;
+}
+.b-profile-page .b-content .b-item .label {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+.b-profile-page .b-content .b-item .currency { font-size: 14px; }
+.b-profile-page .b-content .b-item .value {
+  display: block;
+  font-size: 52px;
+  font-weight: bold;
+  text-align: center;
+}
+.b-profile-page .b-content .b-item .last { padding-left: 0.5em; }
 #flash {
   background-color: #f5f5ea;
   padding: 7px 14px;

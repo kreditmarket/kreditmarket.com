@@ -6,3 +6,15 @@
 
 .b-profile-page
 	= render :partial => "name"
+	.b-content
+		.b-item
+			%span.label Код
+			%span.value= @user.id
+		.b-item
+			%span.label Заявок
+			%span.value= @referal_requests_count
+		.b-item
+			%span.label Заработано
+			%span.value.last
+				= @referal_salary 
+				%span.currency руб.

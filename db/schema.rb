@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110223115314) do
+ActiveRecord::Schema.define(:version => 20110225201009) do
 
   create_table "requests", :force => true do |t|
     t.string   "personal_last_name"
@@ -86,6 +86,7 @@ ActiveRecord::Schema.define(:version => 20110223115314) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "agent_code"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
