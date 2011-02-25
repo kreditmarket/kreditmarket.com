@@ -107,8 +107,8 @@ ru:
   clearance:    
     models:
       clearance_mailer:
-        change_password: "Смена пароля"
-        confirmation: "Подтверждение аккаунта"
+        change_password: "Магазин Кредитов | Смена пароля"
+        confirmation: "Магазин Кредитов | Подтверждение аккаунта"
     controllers:
       confirmations:
         confirmed_email: "Подтверждение прошло успешно."

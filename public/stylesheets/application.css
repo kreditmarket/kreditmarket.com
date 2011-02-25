@@ -146,6 +146,10 @@ form.simple_form div.numeric textarea {
   zoom: 1;
 }
 form.simple_form input[type="checkbox"] { margin-left: 0; }
+form.simple_form input[type="submit"] {
+  font-size: 16px;
+  padding: 4px;
+}
 form.simple_form textarea {
   height: 124px;
   resize: vertical;
@@ -713,6 +717,11 @@ span.half-space {
   display: inline-block;
   margin-top: 15px;
 }
+.b-profile-page .name {
+  font-family: 'Georgia', serif;
+  margin: 15px 0px 30px 0px;
+}
+.b-profile-page .email { font-style: italic; }
 #flash {
   background-color: #f5f5ea;
   padding: 7px 14px;

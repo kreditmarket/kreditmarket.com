@@ -1,0 +1,5 @@
+.name
+  = current_user.full_name.force_encoding('utf-8')
+  %span.email
+    = surround '(', ')' do
+      = current_user.email
