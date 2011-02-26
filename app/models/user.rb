@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   include Clearance::User
   
-  ROLES = %w[admin moderator author banned]
+  ROLES = %w[admin moderator agent]
   
   def roles=(roles)
     self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum

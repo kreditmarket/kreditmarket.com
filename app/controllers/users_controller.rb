@@ -5,7 +5,11 @@ class UsersController < Clearance::UsersController
 	before_filter :define_the_user, :only => [:index, :show, :edit, :update]
 	
 	def index
-		@users = User.find(:all)
+		unless current_user.is? :moderator
+			redirect_to root_url	
+		else
+			@users = User.find(:all)
+		end
 	end
 	
 	def edit
