@@ -9,6 +9,7 @@ KreditmarketCom::Application.routes.draw do
   match "profile" => 'users#show', :as => "profile"
   match "settings" => 'users#edit', :as => "settings"
   match "agents" => 'users#index', :as => "agents"
+  post "reset" => 'users#reset', :as => "reset"
   
   match 'sign_out' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
   

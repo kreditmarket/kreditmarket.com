@@ -12,6 +12,10 @@ class UsersController < Clearance::UsersController
 		end
 	end
 	
+	def reset
+		
+	end
+	
 	def edit
 		
 	end

@@ -779,6 +779,7 @@ span.half-space {
   text-align: center;
 }
 .b-profile-page .b-content .b-item .last { padding-left: 0.7em; }
+td input[type="submit"] { padding: 3px; }
 #flash {
   background-color: #f5f5ea;
   padding: 7px 14px;

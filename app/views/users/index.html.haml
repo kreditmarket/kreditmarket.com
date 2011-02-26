@@ -5,10 +5,11 @@
 %table
 	%thead
 		%tr
-			%th Агент
+			%th{:width => "70%"} Агент
 			%th Код
 			%th Заявок
 			%th Сумма, руб.
+			%th
 	%tbody
 		- @users.each do |user|
 			%tr
@@ -16,3 +17,4 @@
 				%td= user.id
 				%td= get_referal_requests_count(user)
 				%td= get_referal_salary(user)
+				%td= button_to('Обнулить', { :action => :reset, :id => user.id }, :confirm => 'Вы уверены?', :remote => true, :disable_with => 'Обнуляем...', :method => :post)
