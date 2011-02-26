@@ -684,12 +684,53 @@ span.half-space {
 		font-style: italic;
 	}
 	
+	pre {
+		font: 12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+		width: 48em;
+	}
+	
 	.b-content {
+		width: 70%;
+		p {
+			line-height: 1.4em;
+			margin-bottom: 1.6em;
+		}
+		
+		li {
+			line-height: 1.4em;
+		}
+		
+		.b-ref_link {
+			position: relative;
+			padding-left: 15px;
+			margin-bottom: 35px;
+				
+			.b-ref_link-url {
+				border: 1px solid #bedce7;
+				display: block;
+				position: relative;
+				background-color: #eaf2f5;
+				padding: 5px 10px;
+				overflow: hidden;
+				zoom: 1;
+			}
+			
+			.b-ref_link-caption {
+				display: inline-block;
+				font-size: 0.625em;
+				padding-bottom: 3px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+		}
+		
 		.b-item {
 			position: relative;
 			display: block;
 			float: left;
-			margin: 1.5em 2.4em 0 0;
+			margin: 1.5em 2.4em 2.5em 0;
 			
 			.label {
 				text-align: center;

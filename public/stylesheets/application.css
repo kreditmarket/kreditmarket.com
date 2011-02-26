@@ -723,11 +723,44 @@ span.half-space {
   margin: 15px 0px 30px 0px;
 }
 .b-profile-page .email { font-style: italic; }
+.b-profile-page pre {
+  font: 12px Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 48em;
+}
+.b-profile-page .b-content { width: 70%; }
+.b-profile-page .b-content p {
+  line-height: 1.4em;
+  margin-bottom: 1.6em;
+}
+.b-profile-page .b-content li { line-height: 1.4em; }
+.b-profile-page .b-content .b-ref_link {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 35px;
+}
+.b-profile-page .b-content .b-ref_link .b-ref_link-url {
+  border: 1px solid #bedce7;
+  display: block;
+  position: relative;
+  background-color: #eaf2f5;
+  padding: 5px 10px;
+  overflow: hidden;
+  zoom: 1;
+}
+.b-profile-page .b-content .b-ref_link .b-ref_link-caption {
+  display: inline-block;
+  font-size: 0.625em;
+  padding-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 .b-profile-page .b-content .b-item {
   position: relative;
   display: block;
   float: left;
-  margin: 1.5em 2.4em 0 0;
+  margin: 1.5em 2.4em 2.5em 0;
 }
 .b-profile-page .b-content .b-item .label {
   text-align: center;
