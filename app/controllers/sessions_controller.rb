@@ -4,7 +4,7 @@ class SessionsController < Clearance::SessionsController
 	end
 	
 	def url_after_destroy
-		root_url
+		page_path("affiliate")
 	end
 	
 end

@@ -8,7 +8,7 @@ gem 'less'
 gem 'simple_form'
 gem 'russian'
 gem 'clearance'
-gem 'mysql2'
+gem 'mysql'
 
 gem 'capistrano'
 

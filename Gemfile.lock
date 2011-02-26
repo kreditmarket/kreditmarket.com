@@ -54,7 +54,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mutter (0.5.3)
-    mysql2 (0.2.6)
+    mysql (2.8.1-x86-mingw32)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -100,7 +100,7 @@ DEPENDENCIES
   haml
   high_voltage
   less
-  mysql2
+  mysql
   rails (= 3.0.3)
   russian
   simple_form
