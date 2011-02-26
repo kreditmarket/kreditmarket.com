@@ -784,3 +784,54 @@ span.half-space {
   margin-bottom: 25px;
   color: #333333;
 }
+table {
+  font-size: 13px;
+  line-height: 15px;
+  margin-top: 1.4em;
+  width: 700px;
+  border-spacing: 0px 0px;
+  border-collapse: collapse;
+  empty-cells: show;
+}
+table td { padding: 0.5em 2em 0 0; }
+table td .price { font-weight: bold; }
+table td .name { font-family: Georgia; }
+table td .date {
+  display: inline-block;
+  font-size: 80%;
+  color: #888888;
+  margin-right: 3px;
+}
+table td h3 {
+  font-style: italic;
+  margin-bottom: -1em;
+}
+table td.last { padding-right: 0; }
+table th.last { padding-right: 0; }
+table tbody { overflow: auto !important; }
+table tbody tr.emphasized { background-color: #fffdea; }
+table tbody tr { cursor: pointer; }
+table tbody tr td {
+  padding: 15px 0px 15px 0px;
+  vertical-align: baseline;
+}
+table tbody tr td.digits {
+  text-align: right;
+  padding-right: 40px;
+}
+table tbody tr:hover td { background: #fffdea; }
+table tbody tr:hover th { background: #fffdea; }
+table tbody tr.highlight td { background: #fff9b8; }
+table tbody tr.highlight th { background: #fff9b8; }
+table tbody tr.highligh:hover td { background: #f2f2e5; }
+table tbody tr.highligh:hover th { background: #f2f2e5; }
+table th {
+  padding: 0 2em 0.6em 0;
+  font-style: italic;
+  border-bottom: 1px solid #dddddd;
+}
+table th span {
+  margin: 0;
+  padding: 0;
+  background: none;
+}

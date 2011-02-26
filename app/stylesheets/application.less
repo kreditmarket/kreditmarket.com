@@ -765,3 +765,70 @@ span.half-space {
 	margin-bottom: 25px;
 	color: #333;
 }
+
+table { 
+	font-size: 13px; 
+	line-height: 15px; 
+	margin-top: 1.4em;  
+	width: 700px;
+	border-spacing: 0px 0px;
+	border-collapse: collapse;
+	empty-cells: show;			
+
+	td { 
+		padding: .5em 2em 0 0; 
+
+		.price { font-weight: bold; }
+		.name { font-family: Georgia; }
+		.date {
+			display: inline-block;
+			font-size: 80%;
+			color: #888;
+			margin-right: 3px;
+		}			
+		h3 { 
+			font-style: italic; 
+			margin-bottom: -1em; }			
+	}
+
+	td.last, th.last { padding-right: 0; }
+
+	tbody {	
+		overflow: auto !important;		
+		tr.emphasized { background-color: #fffdea; }
+		tr {
+			cursor: pointer;
+
+			td { 
+				padding: 15px 0px 15px 0px;
+				vertical-align: baseline; }
+			td.digits { 
+				text-align: right; 
+				padding-right: 40px; }			
+		}
+
+		tr:hover {
+			td, th { background: #fffdea; }
+		}
+
+		tr.highlight {
+			td, th { background: #fff9b8; }
+		}
+
+		tr.highligh:hover {
+			td, th { background: #f2f2e5; }
+		}
+	}
+
+	th {
+		padding: 0 2em .6em 0; 
+		font-style: italic; 
+		border-bottom: 1px solid #ddd;
+
+		span {
+			margin: 0; 
+			padding: 0;
+			background: none;
+		}
+	}
+}

@@ -1,8 +1,12 @@
 #coding: utf-8
 
 class UsersController < Clearance::UsersController
-	before_filter :authenticate, :only => [:show, :edit]	
-	before_filter :define_the_user, :only => [:show, :edit, :update]
+	before_filter :authenticate, :only => [:index, :show, :edit]	
+	before_filter :define_the_user, :only => [:index, :show, :edit, :update]
+	
+	def index
+		@users = User.find(:all)
+	end
 	
 	def edit
 		

@@ -1,0 +1,18 @@
+- title "Агенты"
+
+%h1 Список агентов
+
+%table
+	%thead
+		%tr
+			%th Агент
+			%th Код
+			%th Заявок
+			%th Сумма, руб.
+	%tbody
+		- @users.each do |user|
+			%tr
+				%td= user.full_name
+				%td= user.id
+				%td= get_referal_requests_count(user)
+				%td= get_referal_salary(user)
