@@ -1,6 +1,10 @@
 class SessionsController < Clearance::SessionsController
 	def url_after_create
-		profile_url
+		unless current_user.is? :moderator
+			profile_url
+		else
+			agents_url
+		end
 	end
 	
 	def url_after_destroy
