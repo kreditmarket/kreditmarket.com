@@ -8,13 +8,16 @@
   
   %div
     %h2 ул. Победы, 86 (пересечение с ул. Матросова)
-    .b-map
-      = render "shared/maps/pobeda" 
-      
+    .b-map-new
+      .b-item
+        = render "shared/maps/pobeda"
+      .b-item
+        = image_tag "office-pobeda.jpg" 
+      .clear     
   %div
     %h2 ул. Куйбышева, 71 (магазин «Горилка», 2-й этаж)
     .b-map
-      = render "shared/maps/kuybisheva" 
+      = render "shared/maps/kuybisheva"
       
   %div
     %h2 ул. Стара-Загора, 130 (магазин «Пятерочка») 
