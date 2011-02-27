@@ -12,9 +12,9 @@
 			%th
 	%tbody
 		- @users.each do |user|
-			%tr
-				%td= user.full_name
-				%td= user.id
-				%td= get_referal_requests_count(user)
-				%td= get_referal_salary(user)
-				%td= button_to('Обнулить', { :action => :reset, :id => user.id }, :confirm => 'Вы уверены?', :remote => true, :disable_with => 'Обнуляем...', :method => :post)
+			%tr{:id => "#{user.id}"}
+				%td{:id => "#{user.id}-full_name"}= user.full_name
+				%td{:id => "#{user.id}-id"}= user.id
+				%td{:id => "#{user.id}-requests_count"}= get_referal_requests_count(user)
+				%td{:id => "#{user.id}-salary"}= get_referal_salary(user)
+				%td= button_to('Сбросить', { :action => :reset, :id => user.id }, :confirm => 'Вы уверены?', :remote => true, :disable_with => 'Обнуляем...', :method => :post)
