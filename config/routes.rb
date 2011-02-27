@@ -7,7 +7,11 @@ KreditmarketCom::Application.routes.draw do
 		end
   end
   resources :pages
-  resources :users
+  resources :users do
+    member do
+      get "is_moderator" => "users#is_moderator"
+    end
+  end
   resource :session, :controller => "sessions"
   
   match "profile" => 'users#show', :as => "profile"
