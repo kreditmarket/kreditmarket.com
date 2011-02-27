@@ -1,7 +1,11 @@
 KreditmarketCom::Application.routes.draw do
   get "home/index"
 
-  resources :requests
+  resources :requests do
+  	member do
+  		get	"accept" => "requests#accept"
+		end
+  end
   resources :pages
   resources :users
   resource :session, :controller => "sessions"

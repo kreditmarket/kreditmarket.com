@@ -29,7 +29,7 @@ class UsersController < Clearance::UsersController
 	end
 	
 	def show
-		@referal_requests_count = Request.find_by_agent_code(@user.id).to_i ||= 0
+		@referal_requests_count = Request.accepted.unpaid.find_by_agent_code(@user.id).to_i ||= 0
 		@referal_salary = @referal_requests_count * 200
 	end
 	

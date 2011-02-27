@@ -1,6 +1,8 @@
+#coding: utf-8
+
 class RequestsController < ApplicationController
   # GET /requests
-  # GET /requests.xml
+  # GET /requests.xml  
   def index
     @requests = Request.all
 
@@ -8,6 +10,13 @@ class RequestsController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @requests }
     end
+  end
+  
+  def accept
+  	@request = Request.find(params[:id]) if params[:id]
+		if @request.update_attribute("accepted", true)
+			flash[:notice] = "Заявка была отмечена как одобренная."			
+		end
   end
 
   # GET /requests/1
