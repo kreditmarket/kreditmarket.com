@@ -45,6 +45,7 @@
     %span Количество иждевенцев:  
     = @request.personal_izhd_count
     %br/
+    %br/
   - unless @request.agent_code.nil?
     %span Код агента:  
     = @request.agent_code
@@ -265,5 +266,8 @@
     %span Сайт:  
     = @request.inc_org_site
     %br/
+%br/
+%br/
+= link_to "Одобрить заявку", accept_request_url(@request.id)
 %br/
 %br/

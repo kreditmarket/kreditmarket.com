@@ -14,7 +14,7 @@ class RequestsController < ApplicationController
   
   def accept
   	@request = Request.find(params[:id]) if params[:id]
-		if @request.update_attribute("accepted", true)
+		if @request.update_attribute("is_accepted", true)
 			flash[:notice] = "Заявка была отмечена как одобренная."			
 		end
   end
@@ -55,7 +55,7 @@ class RequestsController < ApplicationController
       if @request.save
         UserMailer.loan_request_to_office(@request).deliver
         UserMailer.loan_request_to_director(@request).deliver
-        format.html { redirect_to(@request, :notice => 'Request was successfully created.') }
+        format.html { redirect_to(@request) }
         format.xml  { render :xml => @request, :status => :created, :location => @request }
       else
         format.html { render :action => "new" }

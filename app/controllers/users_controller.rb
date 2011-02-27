@@ -1,4 +1,4 @@
-#coding: utf-8
+ #coding: utf-8
 
 class UsersController < Clearance::UsersController
 	before_filter :authenticate, :only => [:index, :show, :edit]	
@@ -13,7 +13,8 @@ class UsersController < Clearance::UsersController
 	end
 	
 	def reset
-		
+		@agent_code = params[:id].to_i		
+		Request.update_all("is_agent_paid = true", "agent_code = #{@agent_code}") if @agent_code
 	end
 	
 	def edit
@@ -29,7 +30,7 @@ class UsersController < Clearance::UsersController
 	end
 	
 	def show
-		@referal_requests_count = Request.accepted.unpaid.find_by_agent_code(@user.id).to_i ||= 0
+		@referal_requests_count = Request.accepted.unpaid.where(:agent_code => @user.id).count ||= 0
 		@referal_salary = @referal_requests_count * 200
 	end
 	
