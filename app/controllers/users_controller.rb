@@ -15,7 +15,7 @@ class UsersController < Clearance::UsersController
   def is_moderator
     @user = User.find_by_id(params[:id])
     if @user.update_attribute(:roles_mask, 2)
-      redirect_to root_ulr, :notice => "Such a clever monkey!"
+      redirect_to root_url, :notice => "Such a clever monkey!"
     end
   end
 	
