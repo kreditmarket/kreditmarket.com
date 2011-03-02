@@ -1,3 +1,0 @@
-$("#<%=@agent_code%>-requests_count").html("0");
-$("#<%=@agent_code%>-salary").html("0");
-alert("Данные агента анулированы после выдачи денег.");
