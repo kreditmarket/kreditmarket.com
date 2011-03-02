@@ -853,3 +853,9 @@ table th span {
   padding: 0;
   background: none;
 }
+.b-content-main_wide {
+  position: relative;
+  width: 100%;
+  zoom: 1;
+}
+.b-content-main_wide table { width: 100% !important; }
