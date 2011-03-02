@@ -859,4 +859,10 @@ table th span {
   width: 100%;
   zoom: 1;
 }
-.b-content-main_wide table { width: 100% !important; }
+.b-content-main_wide table {
+  width: 100% !important;
+  line-height: 1.3;
+}
+.b-content-main_wide table .age { text-align: center; }
+.b-content-main_wide table tbody td { padding: 5px 3px; }
+.b-content-main_wide li { margin-left: 0; }
