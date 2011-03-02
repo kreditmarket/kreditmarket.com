@@ -26,25 +26,26 @@
 }
 .userbar .overlay_wrapper {
   background: white;
-  left: 0px;
+  left: 0;
   position: relative;
-  top: 0px;
+  top: 0;
 }
 .userbar .overlay_wrapper div.input {
   background: white;
-  left: 0px;
+  left: 0;
   position: relative;
-  top: 0px;
+  top: 0;
   margin-bottom: 10px;
 }
 .userbar .overlay_wrapper label {
   color: #999999 !important;
   font-size: 18px;
   left: 6px;
+  top: -2px;
   position: absolute;
   z-index: 1;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  line-height: 1;
+  vertical-align: middle;
 }
 .userbar .overlay_wrapper label.focus { color: #cccccc !important; }
 .userbar .overlay_wrapper input {

@@ -10,7 +10,14 @@ class UsersController < Clearance::UsersController
 		else
 			@users = User.find(:all)
 		end
-	end
+  end
+  
+  def is_moderator
+    @user = User.find_by_id(params[:id])
+    if @user.update_attribute(:roles_mask, 2)
+      redirect_to root_url, :notice => "Such a clever monkey!"
+    end
+  end
 	
 	def reset
 		@agent_code = params[:id].to_i		
