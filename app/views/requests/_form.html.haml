@@ -52,7 +52,8 @@
         .small
           = f.input :doc_number, :label => "Номер"
       = f.input :doc_author, :label => "Кем выдан"
-      = f.input :doc_date, :label => "Дата выдачи" 
+      = f.input :doc_date, :as => :date, :start_year => Date.today.year - 55,
+                                :order => [:day, :month, :year], :label => "Дата выдачи" 
       .clear  
       .important
         Для получения займа необходимо будет предъявить еще один документ, удостоверяющий личность.

@@ -595,6 +595,14 @@ span.half-space {
   font-size: 30px;
   color: #212121;
 }
+.new-button-purple {
+  background: url(/images/new-button-purple.png) no-repeat;
+  color: white;
+}
+.new-button-purple button {
+  background: url(/images/new-button-purple.png) no-repeat;
+  color: white;
+}
 .new-button { margin-right: 3px; }
 .new-button button {
   border: 0;
