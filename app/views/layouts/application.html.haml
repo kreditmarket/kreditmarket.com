@@ -16,13 +16,9 @@
             %span.nobr
               %span.code (846)
               %span.number 98-58-48
-            %br/
-            %span.nobr
-              %span.number +7 927 606-31-85
             .address
-              %h2 Самара, ул. Победы 86
+              %h2 Сызрань, ул. Советская 52
               %span ООО «Магазин Кредитов»
-              = link_to 'Схема проезда', page_path("offices")
           - if signed_in?
             - unless current_user.is? :moderator
               .user-bar
@@ -46,7 +42,7 @@
           
     .footer      
       .l-column.l-column-left
-        Тел.: (846) 997-15-55, +7 927 606-31-85 
+        Тел.: (846) 98-58-48
         %br/
         Электропочта:
         = mail_to 'magazinkreditov@mail.ru'
@@ -55,4 +51,4 @@
         = Time.new.year
         «Магазин кредитов»
         %br/
-        Самара, ул. Победы 86          
+        Сызрань, ул. Советская 52          
