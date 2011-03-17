@@ -865,4 +865,15 @@ table th span {
 }
 .b-content-main_wide table .age { text-align: center; }
 .b-content-main_wide table tbody td { padding: 5px 3px; }
+.b-content-main_wide table tbody .preferable {
+  overflow: hidden;
+  border: 2px #df1d5c solid;
+  zoom: 1;
+  background: #ffffff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  margin: 1px 0;
+}
+.b-content-main_wide table tbody .preferable td { padding: 10px 0; }
 .b-content-main_wide li { margin-left: 0; }
