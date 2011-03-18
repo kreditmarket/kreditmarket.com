@@ -26,7 +26,21 @@ $(document).ready(function() {
 		$(".userbar-layer").toggle();
 	});
 	
-	$("#submit").click(function() {
+	$("#submit1").click(function() {
+		$("#step-1").hide();
+		$("#step-2").show();
+		
+		return false;
+	});
+
+	$("#submit2").click(function() {
+		$("#step-1").hide();
+		$("#step-2").show();
+		
+		return false;
+	});
+	
+	$("#submit3").click(function() {
 		$("#step-1").hide();
 		$("#step-2").show();
 		
