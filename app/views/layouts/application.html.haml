@@ -9,8 +9,6 @@
         .header
           .logo
             = link_to(image_tag('logo.png'), root_path)
-          .logo2
-            = image_tag "logo2.png", :style => "position: relative; top: -15px;"
           .phone
             %h3 Прием заявок по телефону
             %span.nobr
@@ -18,7 +16,6 @@
               %span.number 98-58-48
             .address
               %h2 Сызрань, ул. Советская 52
-              %span ООО «Магазин Кредитов»
           - if signed_in?
             - unless current_user.is? :moderator
               .user-bar
@@ -49,6 +46,6 @@
       .l-column.l-column-right
         © 
         = Time.new.year
-        «Магазин кредитов»
+        «Отличные наличные»
         %br/
         Сызрань, ул. Советская 52          

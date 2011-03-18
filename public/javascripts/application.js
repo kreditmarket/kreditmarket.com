@@ -129,7 +129,7 @@ $(document).ready(function() {
 	$("#data-picker-days").slider({
 		value: defaultDaysValue,
 		min: 7,
-		max: 16,
+		max: 14,
 		step: 1,
 		slide: function(event, ui){
 			var amount = ui.value;
@@ -170,8 +170,8 @@ $(document).ready(function() {
 		var Slider = $("#data-picker-days");
 		$("body").find("#request_days").attr('value', $(this).val());
 					
-		if ($(this).val() > 16) {
-			alert("Займ не выдается на срок более чем 16 дней.");
+		if ($(this).val() > 14) {
+			alert("Займ не выдается на срок более чем 14 дней.");
 			Slider.slider("option", "value", defaultDaysValue);				
 			$(this).attr("value", defaultDaysValue);
 			
