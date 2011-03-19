@@ -32,12 +32,14 @@
         = f.input :personal_birth_place, :label => "Место рождения", :hint => "Как указано в паспорте."  
         = f.input :personal_birth_date, :as => :date, :start_year => Date.today.year - 65,
                                 :end_year => Date.today.year - 21,
-                                :order => [:day, :month, :year], :label => "Дата рождения"        
+                                :order => [:day, :month, :year], :label => "Дата рождения"    
+  
       .l-column        
         = f.input :personal_relationship_status, :label => "Семейный статус"
         = f.input :personal_education, :label => "Образование"
         = f.input :personal_inn, :label => "ИНН"
         = f.input :personal_izhd_count, :label => "Количество #{link_to "иждивенцев", "http://ru.wikipedia.org/wiki/%D0%98%D0%B6%D0%B4%D0%B8%D0%B2%D0%B5%D0%BD%D0%B5%D1%86"}"
+        = f.input :personal_mob_phone, :label => "Мобильный телефон", :required => false 
         = f.input :agent_code, :label => "Код агента" 
       .clear  
       .buttons
@@ -144,7 +146,7 @@
       .clear
       .buttons 
         %span.new-button-small
-          %div{:class => "b-form-button", :id => "goto5-bnt", :onclick => "showStep(5)"} ← Назад
+          %div{:class => "b-form-button", :id => "goto4-bnt", :onclick => "showStep(4)"} ← Назад
         %span.new-button-small
           %div{:class => "b-form-button-submit"} Отправить заявку
         

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110227020642) do
+ActiveRecord::Schema.define(:version => 20110319120559) do
 
   create_table "requests", :force => true do |t|
     t.string   "personal_last_name"
@@ -75,6 +75,7 @@ ActiveRecord::Schema.define(:version => 20110227020642) do
     t.string   "agent_code"
     t.boolean  "is_agent_paid",                   :default => false
     t.boolean  "is_accepted",                     :default => false
+    t.string   "personal_mob_phone"
   end
 
   create_table "users", :force => true do |t|
