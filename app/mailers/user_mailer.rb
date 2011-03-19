@@ -5,7 +5,7 @@ class UserMailer < ActionMailer::Base
   
   def loan_request_to_office(request)
     @request = request
-    mail(:to => "magazinkreditov@mail.ru", :subject => "Новая онлайн заявка")
+    mail(:to => "zayavki_syzran@bk.ru", :subject => "Новая онлайн заявка")
     # mail(:to => "adam.miribyan@gmail.com", :subject => "Новая онлайн заявка manager")
   end
   

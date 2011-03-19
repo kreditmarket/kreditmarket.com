@@ -54,7 +54,7 @@ class RequestsController < ApplicationController
     respond_to do |format|
       if @request.save
         UserMailer.loan_request_to_office(@request).deliver
-        UserMailer.loan_request_to_director(@request).deliver
+        # UserMailer.loan_request_to_director(@request).deliver
         format.html { redirect_to(@request) }
         format.xml  { render :xml => @request, :status => :created, :location => @request }
       else

@@ -45,6 +45,10 @@
     %span Количество иждевенцев:  
     = @request.personal_izhd_count
     %br/
+  - unless @request.personal_mob_phone.nil?
+    %span Мобильный телефон:  
+    = @request.personal_mob_phone
+    %br/
     %br/
   - unless @request.agent_code.nil?
     %span Код агента:  
@@ -206,9 +210,9 @@
     %span Дом. телефон:  
     = @request.second_cont_per_st_phone
     %br/
-  - unless @request.second_cont_per_st_phone.nil? or @request.second_cont_per_st_phone.empty?
+  - unless @request.second_cont_per_mob_phone.nil? or @request.second_cont_per_mob_phone.empty?
     %span Моб. телефон: 
-    = @request.second_cont_per_st_phone
+    = @request.second_cont_per_mob_phone
     %br/
 %br/
 %br/
