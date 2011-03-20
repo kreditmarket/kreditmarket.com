@@ -583,18 +583,18 @@ span.half-space {
   width: 175px;
 }
 .new-button {
-  background: url(/images/new-button.png) no-repeat;
+  background: url(/images/new-button-purple.png) no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
   font-size: 30px;
-  color: #212121;
+  color: white;
 }
 .new-button button {
-  background: url(/images/new-button.png) no-repeat;
+  background: url(/images/new-button-purple.png) no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
   font-size: 30px;
-  color: #212121;
+  color: white;
 }
 .new-button-purple {
   background: url(/images/new-button-purple.png) no-repeat;
@@ -617,18 +617,18 @@ span.half-space {
   white-space: nowrap;
 }
 .new-button-small {
-  background: url(/images/new-button-small.png) no-repeat;
+  background: url(/images/new-button-small-purple.png) no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
   font-size: 22px;
-  color: #212121;
+  color: white;
 }
 .new-button-small div {
-  background: url(/images/new-button-small.png) no-repeat;
+  background: url(/images/new-button-small-purple.png) no-repeat;
   display: -moz-inline-stack;
   display: inline-block;
   font-size: 22px;
-  color: #212121;
+  color: white;
 }
 .new-button-small { margin-right: 3px; }
 .new-button-small div {
