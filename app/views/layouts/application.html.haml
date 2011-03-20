@@ -13,9 +13,9 @@
             .address
               %h2 Сызрань, ул. Советская 52
           .phone
-            %h3 Прием заявок по телефону
+            %h2 Прием заявок по телефону
             %span.nobr
-              %span.code (846)
+              %span.code (8464)
               %span.number 98-58-48
           - if signed_in?
             - unless current_user.is? :moderator
@@ -40,7 +40,7 @@
           
     .footer      
       .l-column.l-column-left
-        Тел.: (846) 98-58-48
+        Тел.: (8464) 98-58-48
         %br/
         Электропочта:
         = mail_to 'zayavki_syzran@bk.ru'
