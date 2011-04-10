@@ -27,6 +27,9 @@
               %h2 Самара, ул. Куйбышева 71
               %span ООО «Магазин Кредитов»
               = link_to 'Схема проезда', page_path("offices")
+              .other-branches
+                ↓ 
+                %a{:href => "#branches"} другие филиалы
           - if signed_in?
             - unless current_user.is? :moderator
               .user-bar
