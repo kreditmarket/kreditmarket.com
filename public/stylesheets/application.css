@@ -890,9 +890,10 @@ table th span {
   margin-left: 15px;
   font-size: 90%;
 }
-.other-branches a {
+.other-branches a:link { color: #df1d5c; }
+.other-branches a:hover { color: #df1d5c; }
+.other-branches a:visited { color: #df1d5c; }
+.other-branches a.pseudo {
   text-decoration: none;
   border-bottom: 1px #df1d5c dotted;
 }
-.other-branches a:hover { color: #df1d5c; }
-.other-branches a:visited { color: #df1d5c; }

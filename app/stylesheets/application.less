@@ -903,12 +903,12 @@ table {
 .other-branches {
   display: inline-block !important;
   margin-left: 15px;
-  font-size: 90%;
+  font-size: 90%;  
   
-  a {
+  a:link, a:hover, a:visited { color: @first_main_color; }
+  
+  a.pseudo {
     text-decoration: none;
     border-bottom: 1px @first_main_color dotted;
   }
-  
-  a:hover, a:visited { color: @first_main_color; }
 }

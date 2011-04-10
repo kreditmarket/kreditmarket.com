@@ -1,4 +1,4 @@
-1302441038
+1302441503
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -175,6 +175,7 @@ mtime_including_imports	/home/adam/Projects/kreditmarket.com/vendor/plugins/more
 new	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def new
 oa	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function oa(a,b,d){var e=b==="width"?a.offsetWidth:a.offsetHeight;if(d==="border")return e;c.each(b==="width"?Pa:Qa,function(){d||(e-=parseFloat(c.css(a,"padding"+this))||0);if(d==="margin")
 oa	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function oa(a,b,d){var e=b==="width"?a.offsetWidth:a.offsetHeight;if(d==="border")return e;c.each(b==="width"?Pa:Qa,function(){d||(e-=parseFloat(c.css(a,"padding"+this))||0);if(d==="margin")
+other_branches_link	/home/adam/Projects/kreditmarket.com/app/helpers/home_helper.rb	  def other_branches_link
 path_to_destination	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    def path_to_destination(path)
 persisted?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def persisted?() 
 protect_against_forgery?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def protect_against_forgery?
