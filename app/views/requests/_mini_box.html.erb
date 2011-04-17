@@ -1,0 +1,28 @@
+<div id="miniBox" class="miniBox">
+  <h1>Мини-анкета</h1>
+  <p class="lid">
+    Напишите свое полное имя, номер телефона и отправьте нам заявку.
+    В течение нескольких секунд ваши данные пройдут проверку, и 
+    мы сообщим вам где вы сможете забрать свои деньги.
+  </p>
+  <p class="amount-and-term">
+    <span id="miniAmount">3000 руб.</span> на <span id="miniTerm">10 дней</span>.
+  </p>
+<%= simple_form_for @request do |f| %>
+  <div class="mini-form">    
+    <%= f.input :personal_last_name, :label => "Фамилия", :required => false %>
+    <%= f.input :personal_first_name, :label => "Имя", :required => false %>
+    <%= f.input :personal_surname, :label => "Отчество", :required => false %>
+    <%= f.input :personal_mob_phone, :label => "Телефон для связи", :required => false %>    
+  </div>
+  <div class="thank-you">
+    <%= image_tag "logo-small.png" %>
+    <p>Спасибо, что выбираете <span class="nobr">Магазин Кредитов!</span></p>    
+  </div>  
+  <div class="clear">
+  <p class="submit">
+    <small>Все ваши данные находятся в безопасности.</small>
+    <%= image_submit_tag "btn_send.png" %>
+  </p>
+<% end %>
+</div>

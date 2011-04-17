@@ -9,6 +9,16 @@ function showStep(stepNo) {
 }
 
 $(document).ready(function() {
+  // facebox
+  $.facebox.settings.closeImage = '/images/closelabel.png';
+  $.facebox.settings.loadingImage = '/images/loading.gif';
+  $('a[rel*=facebox]').facebox();
+  
+  $("#mini > h4").click(function() {
+    $.facebox({ div: '#miniBox' }, "miniBox")
+  });
+  
+  
 	$(".overlay_wrapper > input").focusin(function() {
 		$("label[for="+ this.id +"]").addClass("focus");
 	})

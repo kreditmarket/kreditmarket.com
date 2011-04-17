@@ -912,3 +912,120 @@ table {
     border-bottom: 1px @first_main_color dotted;
   }
 }
+
+.b-form-wrapper {
+  position: relative;
+}
+
+#mini {
+  display: block;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 282px;
+  margin-right: 15px;
+  border-bottom: 1px solid #ededed;
+
+  h4 {
+    background-color: #FFCC00;
+    font-size: 20px;
+    line-height: 1.5;
+    border-bottom: 1px solid #CC9900;
+    padding: 0 10px 0 10px;
+    cursor: pointer;
+  }
+
+  a:link,
+  a:visited,
+  a:hover { 
+    color: #CC9900; 
+    text-decoration: none;
+    border-bottom: 1px dotted #cc9900;
+  }
+
+  span.red-mark {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    font-size: 11px;
+    line-height: 12px;
+    padding: 0 1px 1px 1px;
+    vertical-align: baseline;
+    margin: 0 0 0 15px;  
+    position: relative;
+    top: -2px;
+  }
+
+  p {
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+
+.lid {
+  font-size: 16px;
+  color: #999;
+  line-height: 1.3;
+}
+
+.miniBox {
+  display: none;
+
+  .mini-form,
+  .thank-you {
+    position: relative;
+    display: block;
+    float: left;
+  }
+
+  .mini-form {
+    margin-right: 18px;
+    width: 300px;
+  }
+
+  .thank-you {
+    width: 174px;
+    text-align: center;
+    margin-top: 1.5em;
+    
+    p {
+      font-family: Georgia;
+      font-size: 22px;
+      font-style: italic;
+      line-height: 1.1;
+    }
+  }
+
+  h1 {
+    color: #444;
+    border-bottom: 1px solid #ededed;
+    line-height: 1.5;
+  }
+
+  .submit {
+    border-top: 1px dashed #ccc;
+    padding-top: 15px;
+
+    small {
+      display: block;
+      line-height: 1.5;
+      margin-bottom: 1.5em;
+      background: url("/images/lock.png") no-repeat;
+      padding-left: 20px;
+      height: 16px;
+      padding-top: 3px;
+    }
+  }
+
+  .amount-and-term {
+    background-color: #FFC;
+    border-bottom: 1px solid #ededed;
+    border-top: 1px solid #ededed;
+    margin: 5px 0 30px;
+    padding: 10px 15px;
+    text-align: center;
+
+    span { font-weight: bold; } 
+  }  
+}

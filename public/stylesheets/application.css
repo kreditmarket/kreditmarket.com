@@ -897,3 +897,111 @@ table th span {
   text-decoration: none;
   border-bottom: 1px #df1d5c dotted;
 }
+.b-form-wrapper { position: relative; }
+#mini {
+  display: block;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 282px;
+  margin-right: 15px;
+  border-bottom: 1px solid #ededed;
+}
+#mini h4 {
+  background-color: #ffcc00;
+  font-size: 20px;
+  line-height: 1.5;
+  border-bottom: 1px solid #cc9900;
+  padding: 0 10px 0 10px;
+  cursor: pointer;
+}
+#mini a:link {
+  color: #cc9900;
+  text-decoration: none;
+  border-bottom: 1px dotted #cc9900;
+}
+#mini a:visited {
+  color: #cc9900;
+  text-decoration: none;
+  border-bottom: 1px dotted #cc9900;
+}
+#mini a:hover {
+  color: #cc9900;
+  text-decoration: none;
+  border-bottom: 1px dotted #cc9900;
+}
+#mini span.red-mark {
+  display: inline-block;
+  background-color: red;
+  color: white;
+  font-size: 11px;
+  line-height: 12px;
+  padding: 0 1px 1px 1px;
+  vertical-align: baseline;
+  margin: 0 0 0 15px;
+  position: relative;
+  top: -2px;
+}
+#mini p {
+  padding-left: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.lid {
+  font-size: 16px;
+  color: #999999;
+  line-height: 1.3;
+}
+.miniBox { display: none; }
+.miniBox .mini-form {
+  position: relative;
+  display: block;
+  float: left;
+}
+.miniBox .thank-you {
+  position: relative;
+  display: block;
+  float: left;
+}
+.miniBox .mini-form {
+  margin-right: 18px;
+  width: 300px;
+}
+.miniBox .thank-you {
+  width: 174px;
+  text-align: center;
+  margin-top: 1.5em;
+}
+.miniBox .thank-you p {
+  font-family: Georgia;
+  font-size: 22px;
+  font-style: italic;
+  line-height: 1.1;
+}
+.miniBox h1 {
+  color: #444444;
+  border-bottom: 1px solid #ededed;
+  line-height: 1.5;
+}
+.miniBox .submit {
+  border-top: 1px dashed #cccccc;
+  padding-top: 15px;
+}
+.miniBox .submit small {
+  display: block;
+  line-height: 1.5;
+  margin-bottom: 1.5em;
+  background: url("/images/lock.png") no-repeat;
+  padding-left: 20px;
+  height: 16px;
+  padding-top: 3px;
+}
+.miniBox .amount-and-term {
+  background-color: #ffffcc;
+  border-bottom: 1px solid #ededed;
+  border-top: 1px solid #ededed;
+  margin: 5px 0 30px;
+  padding: 10px 15px;
+  text-align: center;
+}
+.miniBox .amount-and-term span { font-weight: bold; }
