@@ -8,6 +8,14 @@ function showStep(stepNo) {
     $('li#stepLink'+stepNo).addClass('selected');
 }
 
+// Declines numbers related nouns
+// declOfNum(5, ["день", "дня", "дней"])
+// return "дней"
+function declOfNum(number, titles) {
+    cases = [2, 0, 1, 1, 1, 2];
+    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
+}
+
 $(document).ready(function() {
   // facebox
   $.facebox.settings.closeImage = '/images/closelabel.png';
@@ -15,7 +23,7 @@ $(document).ready(function() {
   $('a[rel*=facebox]').facebox();
   
   $("#mini > h4").click(function() {
-    $.facebox({ div: '#miniBox' }, "miniBox")
+    $.facebox({div: "#miniBox"}, "miniBox");
   });
   
   
@@ -230,6 +238,10 @@ $(document).ready(function() {
 		$(".primary-count").html(primaryAmount + ' руб.');
 		$(".fees").html(fees + ' руб.');
 		$(".secondary-count").html(secondaryAmount + ' руб.');
+    
+    // Mini-tickets facebox
+    $("#miniAmount").html(primaryAmount + ' руб.');
+    $("#miniTerm").html(daysCount + " " + declOfNum(daysCount, ["день", "дня", "дней"]));
 	};
 
 	$("#request_is_as_reg").click(function() {

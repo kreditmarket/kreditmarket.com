@@ -1,4 +1,4 @@
-1303079893
+1303154763
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -7,6 +7,7 @@ AddAgentCodeToUsers	/home/adam/Projects/kreditmarket.com/db/migrate/201102252010
 AddAgentPaidToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226204749_add_agent_paid_to_requests.rb	class AddAgentPaidToRequests 
 AddDaysToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110202071100_add_days_to_requests.rb	class AddDaysToRequests 
 AddFirstNameAndLastNameToUser	/home/adam/Projects/kreditmarket.com/db/migrate/20110223115314_add_first_name_and_last_name_to_user.rb	class AddFirstNameAndLastNameToUser 
+AddIsMiniToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	class AddIsMiniToRequests 
 AddPersonalMobPhoneToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	class AddPersonalMobPhoneToRequests 
 AddRolesMaskToUsers	/home/adam/Projects/kreditmarket.com/db/migrate/20110226174944_add_roles_mask_to_users.rb	class AddRolesMaskToUsers 
 AddSecondContMobPhone	/home/adam/Projects/kreditmarket.com/db/migrate/20110124055524_add_second_cont_mob_phone.rb	class AddSecondContMobPhone 
@@ -98,6 +99,7 @@ d	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery-ui.js	function 
 d	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function d(e){e=c.event.fix(e);e.type=b;return c.event.trigger(e,null,e.target)}c.event.special[b]={setup:function(){ua[b]++===0&&t.addEventListener(a,d,true)},teardown:function()
 da	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function da(a,b,d,e){if(c.isArray(b)&&b.length)c.each(b,function(f,h){d||Ra.test(a)?e(a,h):da(a+"["+(typeof h==="object"||c.isArray(h)?f:"")+"]",h,d,e)});else if(!d&&b!=null&&typeof b==="object")c.isEmptyObject(b)?e(a,""):c.each(b,function(f,h){da(a+"["+f+"]",h,d,e)});else e(a,b)}function S(a,b){var d={};c.each(pa.concat.apply([],pa.slice(0,b)),function(){d[this]=a});return d}function qa(a){if(!ea[a])
 da	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function da(a,b,d,e){if(c.isArray(b)&&b.length)c.each(b,function(f,h){d||Ra.test(a)?e(a,h):da(a+"["+(typeof h==="object"||c.isArray(h)?f:"")+"]",h,d,e)});else if(!d&&b!=null&&typeof b==="object")c.isEmptyObject(b)?e(a,""):c.each(b,function(f,h){da(a+"["+f+"]",h,d,e)});else e(a,b)}function S(a,b){var d={};c.each(pa.concat.apply([],pa.slice(0,b)),function(){d[this]=a});return d}function qa(a){if(!ea[a])
+declOfNum	/home/adam/Projects/kreditmarket.com/public/javascripts/application.js	function declOfNum(number, titles)
 default_input_block	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def default_input_block
 define_the_user	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb			def define_the_user
 destination_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
@@ -121,6 +123,7 @@ down	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205205_change_agent
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110227015538_rename_affiliate_required_columns_in_requests.rb	  def self.down
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110227020642_change_is_accepted_and_is_agent_paid_defaults_in_requests.rb	  def self.down
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	  def self.down
+down	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	  def self.down
 e	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function e(l){return f.step(l)
 e	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function e(l){return f.step(l)
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def edit
@@ -268,6 +271,7 @@ up	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205205_change_agent_p
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110227015538_rename_affiliate_required_columns_in_requests.rb	  def self.up
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110227020642_change_is_accepted_and_is_agent_paid_defaults_in_requests.rb	  def self.up
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	  def self.up
+up	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	  def self.up
 update	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def update
 update	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def update
 url_after_create	/home/adam/Projects/kreditmarket.com/app/controllers/sessions_controller.rb		def url_after_create

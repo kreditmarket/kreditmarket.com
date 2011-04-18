@@ -1,0 +1,26 @@
+%h2 
+  Сумма займа:
+  = succeed " руб." do
+    = @request.amount
+
+%h2 
+  Срок займа:
+  = succeed " дней" do
+    = @request.days   
+
+%div
+  %strong Личные данные:
+%div
+  %span Фамилия: 
+  = @request.personal_last_name
+  %br/
+  %span Имя:  
+  = @request.personal_first_name
+  %br/
+  %span Отчество:  
+  = @request.personal_surname
+  %br/
+  - unless @request.personal_mob_phone.nil?
+    %span Телефон для связи:  
+    = @request.personal_mob_phone
+    %br/
