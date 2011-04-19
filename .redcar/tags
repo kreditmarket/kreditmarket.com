@@ -1,4 +1,4 @@
-1303236580
+1303237129
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -197,6 +197,7 @@ persisted?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test
 protect_against_forgery?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def protect_against_forgery?
 r	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function r()
 r	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function r()
+rake	/home/adam/Projects/kreditmarket.com/lib/recipes/thinking_sphinx.rb	    def rake(*tasks)
 random_string	/home/adam/Projects/kreditmarket.com/app/models/user.rb		def random_string(length=5)
 read_css	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/test_helper.rb	def read_css(file)
 relative_to_source_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    def relative_to_source_path(path)
