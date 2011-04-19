@@ -1,4 +1,4 @@
-1303239434
+1303241524
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -23,7 +23,6 @@ ChangeSecondContFirstName	/home/adam/Projects/kreditmarket.com/db/migrate/201101
 ClearanceCreateUsers	/home/adam/Projects/kreditmarket.com/db/migrate/20110222201235_clearance_create_users.rb	class ClearanceCreateUsers 
 Column	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	    class Column 
 ControllerTest	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/controller_test.rb	class ControllerTest 
-CreateDebtors	/home/adam/Projects/kreditmarket.com/db/migrate/20110419145106_create_debtors.rb	class CreateDebtors 
 CreateRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110123164418_create_requests.rb	class CreateRequests 
 Debtor	/home/adam/Projects/kreditmarket.com/app/models/debtor.rb	class Debtor 
 DebtorTest	/home/adam/Projects/kreditmarket.com/test/unit/debtor_test.rb	class DebtorTest 
@@ -127,7 +126,6 @@ down	/home/adam/Projects/kreditmarket.com/db/migrate/20110227015538_rename_affil
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110227020642_change_is_accepted_and_is_agent_paid_defaults_in_requests.rb	  def self.down
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	  def self.down
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	  def self.down
-down	/home/adam/Projects/kreditmarket.com/db/migrate/20110419145106_create_debtors.rb	  def self.down
 e	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function e(l){return f.step(l)
 e	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function e(l){return f.step(l)
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def edit
@@ -277,7 +275,6 @@ up	/home/adam/Projects/kreditmarket.com/db/migrate/20110227015538_rename_affilia
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110227020642_change_is_accepted_and_is_agent_paid_defaults_in_requests.rb	  def self.up
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	  def self.up
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	  def self.up
-up	/home/adam/Projects/kreditmarket.com/db/migrate/20110419145106_create_debtors.rb	  def self.up
 update	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def update
 update	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def update
 url_after_create	/home/adam/Projects/kreditmarket.com/app/controllers/sessions_controller.rb		def url_after_create
