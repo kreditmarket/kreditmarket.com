@@ -1,4 +1,4 @@
-require '/home/adam/Projects/kreditmarket.com/lib/recipes/thinking_sphinx'
+require 'thinking_sphinx/deploy/capistrano'
 
 set :user, 'kreditmarket'
 
