@@ -1,0 +1,17 @@
+- if @is_in_black_list
+  %strong Находится в черном списке.  
+  %br/
+  %span Паспортные данные: 
+  = "#{@black_list_search.pas_1} #{@black_list_search.pas_2}"
+  %br/
+  %span Полное имя:
+  = "#{@black_list_search.full_name}"
+  %br/
+  %span Дата рождения: 
+  = "#{@black_list_search.birth_date}"
+  %br/
+  %br/
+- else
+  %strong В черном списке не обнаружен.
+  %br/
+  %br/

@@ -10,6 +10,7 @@ gem 'russian'
 gem 'clearance'
 gem 'cancan'
 gem 'mysql2'
+gem 'thinking-sphinx', :git => "git://github.com/freelancing-god/thinking-sphinx.git", :branch => "rails3"
 
 gem 'capistrano'
 
