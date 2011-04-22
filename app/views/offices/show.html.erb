@@ -1,37 +1,22 @@
-<% title @office.address %>
+<% title "Филиал на #{@office.address}" %>
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Slug:</b>
-  <%= @office.slug %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%= @office.address %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @office.phone %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @office.description %>
-</p>
-
-<p>
-  <b>Map:</b>
-  <%= @office.map %>
-</p>
-
-<p>
-  <b>Mode:</b>
-  <%= @office.mode %>
-</p>
-
-
-<%= link_to 'Edit', edit_office_path(@office) %> |
-<%= link_to 'Back', offices_path %>
+<div class="b-office">
+  <div class="back-link">
+    ← <%= link_to "Вернуться к списку филиалов", offices_path %>  
+  </div>
+  <div class="column x-2">
+    <h1><%= @office.address%></h1>
+    <div class="b-office-map">
+      <%= @office.map.html_safe %>
+    </div>
+  </div>
+  <div class="column x-1">    
+    <h3>Телефон</h3>
+    <p><%= @office.phone %></p>   
+    
+    <h3>Режим работы</h3>
+    <p><%= @office.mode %></p>
+    
+    <p style="margin-top: 20px;"><%= @office.description.textile.html_safe %></p>
+  </div>
+</div>

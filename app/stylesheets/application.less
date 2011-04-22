@@ -614,7 +614,7 @@ span.half-space {
 		color: #666;
 		font-size: 18px;
 		font-weight: 500;
-		line-height: 20px;
+		line-height: 1.4;
 		margin-bottom: 20px;
 	}
 	
@@ -1034,6 +1034,76 @@ table {
 
     span { font-weight: bold; } 
   }  
+}
+
+.offices-list {  
+  position: relative;
+  font-size: 16px;
+  margin: 15px 0;
+  
+  li {
+    list-style: none;   
+    padding: 7px 0px;
+    margin: 0;
+    
+    a {
+      width: 100%;
+      padding: 5px;
+      color: #231F20;
+    }
+    
+    a:hover {
+      color: #231F20;
+      background-color: #FFF8D2;
+    }
+    
+    a:visited { color: #231F20; }
+  }
+}
+
+.b-article { margin-bottom: 60px; }
+
+.b-office {
+  display: block;
+  position: relative;
+  width: 100%;
+  
+  .b-office-map {
+    position: relative;
+    display: block;
+    margin-bottom: 60px;
+  }
+  
+  .back-link {
+    position: relative;
+    display: block;
+    margin-bottom: 20px;
+  }
+  
+  h3 { margin-top: 1.5em; }  
+  p { margin-top: 0.3em; }
+  
+  p, ul, ol { line-height: 1.5; }
+  
+  strong { font-weight: bold; }
+  em { font-style: italic; }
+  
+  .column {
+    position: relative;
+    float: left;    
+  }
+  
+  .column:first-child {
+    padding-right: 20px;
+  }
+  
+  .x-2 { width: 50%; }
+  .x-1 { 
+    width: 35%; 
+    margin: 23px 0 30px 0;
+    padding: 0 0 0 30px;    
+    border-left: 1px solid #ededed;
+  }
 }
 
 .hidden {

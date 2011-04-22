@@ -10,6 +10,8 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
+    RedCloth (4.2.7)
+    RedCloth (4.2.7-x86-mingw32)
     abstract (1.0.0)
     actionmailer (3.0.3)
       actionpack (= 3.0.3)
@@ -107,6 +109,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  RedCloth
   cancan
   capistrano
   clearance

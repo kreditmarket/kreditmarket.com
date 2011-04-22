@@ -1,35 +1,16 @@
 <% title "Наши филиалы" %>
 
-<h1>Listing offices</h1>
-
-<table>
-  <tr>
-    <th>Slug</th>
-    <th>Address</th>
-    <th>Phone</th>
-    <th>Description</th>
-    <th>Map</th>
-    <th>Mode</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @offices.each do |office| %>
-  <tr>
-    <td><%= office.slug %></td>
-    <td><%= office.address %></td>
-    <td><%= office.phone %></td>
-    <td><%= office.description %></td>
-    <td><%= office.map %></td>
-    <td><%= office.mode %></td>
-    <td><%= link_to 'Show', office %></td>
-    <td><%= link_to 'Edit', edit_office_path(office) %></td>
-    <td><%= link_to 'Destroy', office, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Office', new_office_path %>
+<div class="b-article">  
+  <h1>Наши филиалы</h1>
+  
+  <p class="lid">
+    Удобное месторасположение наших филиалов позволит вам быстро добраться до нас, где бы вы не находились.
+    Нажмите на адрес филиала, чтобы получить всю информацию о нем.
+  </p>  
+  
+  <ul class="offices-list">
+    <% @offices.each do |office|%>
+      <li><%= link_to office.address, office %></li>
+    <% end %>
+  </ul>
+</div>

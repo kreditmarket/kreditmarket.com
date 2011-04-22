@@ -680,7 +680,7 @@ span.half-space {
   color: #666666;
   font-size: 18px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 1.4;
   margin-bottom: 20px;
 }
 .b-article p {
@@ -1010,4 +1010,59 @@ table th span {
   text-align: center;
 }
 .miniBox .amount-and-term span { font-weight: bold; }
+.offices-list {
+  position: relative;
+  font-size: 16px;
+  margin: 15px 0;
+}
+.offices-list li {
+  list-style: none;
+  padding: 7px 0px;
+  margin: 0;
+}
+.offices-list li a {
+  width: 100%;
+  padding: 5px;
+  color: #231f20;
+}
+.offices-list li a:hover {
+  color: #231f20;
+  background-color: #fff8d2;
+}
+.offices-list li a:visited { color: #231f20; }
+.b-article { margin-bottom: 60px; }
+.b-office {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.b-office .b-office-map {
+  position: relative;
+  display: block;
+  margin-bottom: 60px;
+}
+.b-office .back-link {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+.b-office h3 { margin-top: 1.5em; }
+.b-office p { margin-top: 0.3em; }
+.b-office p { line-height: 1.5; }
+.b-office ul { line-height: 1.5; }
+.b-office ol { line-height: 1.5; }
+.b-office strong { font-weight: bold; }
+.b-office em { font-style: italic; }
+.b-office .column {
+  position: relative;
+  float: left;
+}
+.b-office .column:first-child { padding-right: 20px; }
+.b-office .x-2 { width: 50%; }
+.b-office .x-1 {
+  width: 35%;
+  margin: 23px 0 30px 0;
+  padding: 0 0 0 30px;
+  border-left: 1px solid #ededed;
+}
 .hidden { display: none; }
