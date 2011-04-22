@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 class OfficesController < ApplicationController
   def index
     @offices = Office.all

@@ -3,14 +3,14 @@
 
   <div class="inputs">
     <%= f.input :slug %>
-    <%= f.input :address %>
-    <%= f.input :phone %>
-    <%= f.input :description %>
-    <%= f.input :map %>
-    <%= f.input :mode %>
+    <%= f.input :address, :label => "Адрес" %>
+    <%= f.input :phone, :label => "Телефон" %>
+    <%= f.input :description, :label => "Вспомогательная информация" %>
+    <%= f.input :map, :label => "Код карты" %>
+    <%= f.input :mode, :label => "Режим работы" %>
   </div>
 
   <div class="actions">
-    <%= f.button :submit %>
+    <%= f.submit "Сохранить" %>
   </div>
 <% end %>
