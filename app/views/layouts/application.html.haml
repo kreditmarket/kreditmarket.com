@@ -26,7 +26,7 @@
             .address
               %h2 Самара, пр. Карла Маркса 510В
               %span ООО «Магазин Кредитов»
-              = link_to 'Схема проезда', page_path("offices")
+              = link_to_unless_current 'Схема проезда', office_path("karla-marksa-510v")
               = other_branches_link
           - if signed_in?
             - unless current_user.is? :moderator

@@ -48,47 +48,10 @@
       
     .b-content-footnotes
       %h2{:id => "branches"} Филиалы
-      .branch
-        %span.addr 
-          пр. Карла Маркса, 510В
-        %br/
-        (конечная 41-го маршрута)
-        %span.time ежедневно 10:00 — 19:00 
-      .branch
-        %span.addr 
-          ул. XXII Партсъезда / ул. Победы
-        %br/
-        (метро «Победа»)
-        %span.time ежедневно 10:00 — 19:00 
-      .branch
-        %span.addr 
-          ул. Куйбышева, 71 
-        %br/
-        (магазин «Горилка», <nobr>2-й</nobr> этаж)
-        %span.time ежедневно 10:00 — 19:00  
-      .branch
-        %span.addr 
-          ул. Победы, 86 
-        %br/
-        (пересечение с ул. Матросова)
-        %span.time ежедневно 10:00 — 19:00 
-      .branch
-        %span.addr 
-          ул. Победы, 8Д 
-        %br/
-        %span.time ежедневно 10:00 — 19:00
-      .branch
-        %span.addr 
-          ул. Стара-Загора, 130 
-        %br/
-        (магазин «Пятерочка»)
-        %span.time ежедневно 10:00 — 19:00  
-      .branch
-        %span.addr 
-          ул. Стара-Загора, 301 
-        %br/
-        (магазин «Пятерочка»)
-        %span.time ежедневно 10:00 — 19:00
+      - @offices.each do |office|
+        .branch
+          %span.addr= link_to office.address, office
+          %span.time= office.mode
     
       .b-affiliate-button
         %h3 У нас действует выгодная
