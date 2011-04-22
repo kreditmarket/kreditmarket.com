@@ -1,4 +1,4 @@
-1303243145
+1303488844
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -23,6 +23,7 @@ ChangeSecondContFirstName	/home/adam/Projects/kreditmarket.com/db/migrate/201101
 ClearanceCreateUsers	/home/adam/Projects/kreditmarket.com/db/migrate/20110222201235_clearance_create_users.rb	class ClearanceCreateUsers 
 Column	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	    class Column 
 ControllerTest	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/controller_test.rb	class ControllerTest 
+CreateOffices	/home/adam/Projects/kreditmarket.com/db/migrate/20110422160940_create_offices.rb	class CreateOffices 
 CreateRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110123164418_create_requests.rb	class CreateRequests 
 Debtor	/home/adam/Projects/kreditmarket.com/app/models/debtor.rb	class Debtor 
 DebtorTest	/home/adam/Projects/kreditmarket.com/test/unit/debtor_test.rb	class DebtorTest 
@@ -48,6 +49,12 @@ More	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	c
 MoreTest	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/more_test.rb	class MoreTest 
 Oa	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function Oa(a,b){b.src?c.ajax({url:b.src,async:false,dataType:"script"}):c.globalEval(b.text||b.textContent||b.innerHTML||"");b.parentNode&&b.parentNode.removeChild(b)}function oa(a,b,d){var e=b==="width"?a.offsetWidth:a.offsetHeight;if(d==="border")return e;c.each(b==="width"?Pa:Qa,function(){d||(e-=parseFloat(c.css(a,"padding"+this))||0);if(d==="margin")
 Oa	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function Oa(a,b){b.src?c.ajax({url:b.src,async:false,dataType:"script"}):c.globalEval(b.text||b.textContent||b.innerHTML||"");b.parentNode&&b.parentNode.removeChild(b)}function oa(a,b,d){var e=b==="width"?a.offsetWidth:a.offsetHeight;if(d==="border")return e;c.each(b==="width"?Pa:Qa,function(){d||(e-=parseFloat(c.css(a,"padding"+this))||0);if(d==="margin")
+Office	/home/adam/Projects/kreditmarket.com/app/models/office.rb	class Office 
+OfficeTest	/home/adam/Projects/kreditmarket.com/test/unit/office_test.rb	class OfficeTest 
+OfficesController	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	class OfficesController 
+OfficesControllerTest	/home/adam/Projects/kreditmarket.com/test/functional/offices_controller_test.rb	class OfficesControllerTest 
+OfficesHelper	/home/adam/Projects/kreditmarket.com/app/helpers/offices_helper.rb	module OfficesHelper
+OfficesHelperTest	/home/adam/Projects/kreditmarket.com/test/unit/helpers/offices_helper_test.rb	class OfficesHelperTest 
 PagesController	/home/adam/Projects/kreditmarket.com/app/controllers/pages_controller.rb	class PagesController 
 PagesControllerTest	/home/adam/Projects/kreditmarket.com/test/functional/pages_controller_test.rb	class PagesControllerTest 
 PagesHelper	/home/adam/Projects/kreditmarket.com/app/helpers/pages_helper.rb	module PagesHelper
@@ -93,6 +100,7 @@ compression	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/mo
 count	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def count() 
 count	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def count() 
 count	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	      def count
+create	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def create
 create	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def create
 css_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/test_helper.rb	def css_path
 d	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function d(e){e=c.event.fix(e);e.type=b;return c.event.trigger(e,null,e.target)}c.event.special[b]={setup:function(){ua[b]++===0&&t.addEventListener(a,d,true)},teardown:function()
@@ -106,6 +114,7 @@ default_input_block	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_
 define_the_user	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb			def define_the_user
 destination_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 destination_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    def destination_path
+destroy	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def destroy
 destroy	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def destroy
 disableFormElements	/home/adam/Projects/kreditmarket.com/public/javascripts/rails.js	function disableFormElements(form)
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110123164418_create_requests.rb	  def self.down
@@ -126,8 +135,10 @@ down	/home/adam/Projects/kreditmarket.com/db/migrate/20110227015538_rename_affil
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110227020642_change_is_accepted_and_is_agent_paid_defaults_in_requests.rb	  def self.down
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	  def self.down
 down	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	  def self.down
+down	/home/adam/Projects/kreditmarket.com/db/migrate/20110422160940_create_offices.rb	  def self.down
 e	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function e(l){return f.step(l)
 e	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function e(l){return f.step(l)
+edit	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def edit
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def edit
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def edit
 empty?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
@@ -167,6 +178,7 @@ header	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb
 hideOverlay	/home/adam/Projects/kreditmarket.com/public/javascripts/facebox.js	function hideOverlay()
 id	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def id() 
 index	/home/adam/Projects/kreditmarket.com/app/controllers/home_controller.rb	  def index
+index	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def index
 index	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def index
 index	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def index
 init	/home/adam/Projects/kreditmarket.com/public/javascripts/facebox.js	function init(settings)
@@ -186,6 +198,7 @@ ma	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function ma
 makeCompatible	/home/adam/Projects/kreditmarket.com/public/javascripts/facebox.js	function makeCompatible()
 mtime	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    def mtime(file)
 mtime_including_imports	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    def mtime_including_imports(file)
+new	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def new
 new	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def new
 oa	/home/adam/Projects/kreditmarket.com/monkey/javascripts/jquery-1.4.4.min.js	function oa(a,b,d){var e=b==="width"?a.offsetWidth:a.offsetHeight;if(d==="border")return e;c.each(b==="width"?Pa:Qa,function(){d||(e-=parseFloat(c.css(a,"padding"+this))||0);if(d==="margin")
 oa	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function oa(a,b,d){var e=b==="width"?a.offsetWidth:a.offsetHeight;if(d==="border")return e;c.each(b==="width"?Pa:Qa,function(){d||(e-=parseFloat(c.css(a,"padding"+this))||0);if(d==="margin")
@@ -213,6 +226,7 @@ setup	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/controller_t
 setup_for_generate_test	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/test/test_helper.rb	def setup_for_generate_test
 setup_post	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def setup_post
 setup_user	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	  def setup_user
+show	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def show
 show	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def show
 show	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def show
 showOverlay	/home/adam/Projects/kreditmarket.com/public/javascripts/facebox.js	function showOverlay()
@@ -275,6 +289,8 @@ up	/home/adam/Projects/kreditmarket.com/db/migrate/20110227015538_rename_affilia
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110227020642_change_is_accepted_and_is_agent_paid_defaults_in_requests.rb	  def self.up
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110319120559_add_personal_mob_phone_to_requests.rb	  def self.up
 up	/home/adam/Projects/kreditmarket.com/db/migrate/20110418180401_add_is_mini_to_requests.rb	  def self.up
+up	/home/adam/Projects/kreditmarket.com/db/migrate/20110422160940_create_offices.rb	  def self.up
+update	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def update
 update	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def update
 update	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def update
 url_after_create	/home/adam/Projects/kreditmarket.com/app/controllers/sessions_controller.rb		def url_after_create

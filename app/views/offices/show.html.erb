@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Slug:</b>
+  <%= @office.slug %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @office.address %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @office.phone %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @office.description %>
+</p>
+
+<p>
+  <b>Map:</b>
+  <%= @office.map %>
+</p>
+
+<p>
+  <b>Mode:</b>
+  <%= @office.mode %>
+</p>
+
+
+<%= link_to 'Edit', edit_office_path(@office) %> |
+<%= link_to 'Back', offices_path %>

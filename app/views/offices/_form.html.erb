@@ -1,0 +1,16 @@
+<%= simple_form_for(@office) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :slug %>
+    <%= f.input :address %>
+    <%= f.input :phone %>
+    <%= f.input :description %>
+    <%= f.input :map %>
+    <%= f.input :mode %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

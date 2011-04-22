@@ -1,4 +1,6 @@
 KreditmarketCom::Application.routes.draw do
+  resources :offices
+
   get "home/index"
 
   resources :requests do

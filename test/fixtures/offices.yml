@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  slug: MyString
+  address: MyString
+  phone: MyString
+  description: MyText
+  map: MyText
+  mode: MyString
+
+two:
+  slug: MyString
+  address: MyString
+  phone: MyString
+  description: MyText
+  map: MyText
+  mode: MyString

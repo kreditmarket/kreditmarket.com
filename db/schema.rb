@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110418180401) do
+ActiveRecord::Schema.define(:version => 20110422160940) do
+
+  create_table "debtors", :force => true do |t|
+    t.text "full_name"
+    t.text "birth_date"
+    t.text "pas_1"
+    t.text "pas_2"
+  end
+
+  add_index "debtors", ["id"], :name => "id", :unique => true
+
+  create_table "offices", :force => true do |t|
+    t.string   "slug"
+    t.string   "address"
+    t.string   "phone"
+    t.text     "description"
+    t.text     "map"
+    t.string   "mode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "requests", :force => true do |t|
     t.string   "personal_last_name"
