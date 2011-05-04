@@ -1066,3 +1066,29 @@ table th span {
   border-left: 1px solid #ededed;
 }
 .hidden { display: none; }
+p.checkout-the-mini {
+  font-size: 1.1666em;
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+  background-color: #fffdea;
+  padding: 6px 14px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 3px #cfcfcf;
+  -moz-box-shadow: 0 1px 3px #cfcfcf;
+  box-shadow: 0 1px 3px #cfcfcf;
+  text-overflow: ellipsis;
+  text-shadow: #cccccc 0px 1px 0px;
+  overflow: hidden;
+}
+p.checkout-the-mini span {
+  font-size: 0.75em;
+  color: #999999;
+  display: inline-block;
+  text-shadow: #ffffff 0px 1px 0px;
+}
+p.checkout-the-mini a {
+  color: #df1d5c;
+  text-decoration: none;
+  border-bottom: 1px dashed #df1d5c;
+}

@@ -1,8 +1,6 @@
 #coding: utf-8
 
 class RequestsController < ApplicationController
-  # GET /requests
-  # GET /requests.xml  
   def index
     @requests = Request.all
 
@@ -43,6 +41,13 @@ class RequestsController < ApplicationController
 
   def create
     @request = Request.new(params[:request])
+    
+    # Black List look up
+    @black_list_search = Debtor.search( @request.personal_last_name  + 
+                                        " " + 
+                                        @request.personal_first_name + 
+                                        " " + 
+                                        @request.personal_surname ).first
 
     respond_to do |format|
       if @request.save
