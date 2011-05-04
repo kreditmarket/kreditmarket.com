@@ -19,6 +19,19 @@ class RequestsController < ApplicationController
 
   def show
     @request = Request.find(params[:id])
+    
+    # Black List look up
+    @black_list_search = Debtor.search( @request.personal_last_name  + 
+                                        " " + 
+                                        @request.personal_first_name + 
+                                        " " + 
+                                        @request.personal_surname ).first
+                                        
+    if @black_list_search.present?
+      @is_in_black_list = true
+    else
+      @is_in_black_list = false
+    end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -40,20 +53,7 @@ class RequestsController < ApplicationController
   end
 
   def create
-    @request = Request.new(params[:request])
-    
-    # Black List look up
-    @black_list_search = Debtor.search( @request.personal_last_name  + 
-                                        " " + 
-                                        @request.personal_first_name + 
-                                        " " + 
-                                        @request.personal_surname ).first
-                                        
-    if @black_list_search.present?
-      @is_in_black_list = true
-    else
-      @is_in_black_list = false
-    end
+    @request = Request.new(params[:request])    
 
     respond_to do |format|
       if @request.save
