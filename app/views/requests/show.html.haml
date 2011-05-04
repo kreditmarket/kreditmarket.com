@@ -8,7 +8,7 @@
   Ваша заявка успешно принята.  
 
 - if @request.is_mini?
-  - if @is_in_black_list
+  - unless @is_in_black_list
     %p 
       Ваша заявка одобрена, можете подъезжать в любой из наших 
       = link_to "офисов", offices_path
