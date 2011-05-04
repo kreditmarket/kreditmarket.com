@@ -48,6 +48,12 @@ class RequestsController < ApplicationController
                                         @request.personal_first_name + 
                                         " " + 
                                         @request.personal_surname ).first
+                                        
+    if @black_list_search.present?
+      @is_in_black_list = true
+    else
+      @is_in_black_list = false
+    end
 
     respond_to do |format|
       if @request.save
