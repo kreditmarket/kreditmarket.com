@@ -5,16 +5,17 @@
 %br/
 %br/
 %h1.emphasized
-  Ваша заявка успешно принята.
-  
+  Ваша заявка успешно принята.  
 
-- if @request.is_mini? and @is_in_black_list?
+- if @request.is_mini? and @is_in_black_list
   %p 
     Ваша заявка одобрена, можете подъезжать в любой из наших 
     = link_to "офисов", offices_path
     за деньгами.
-- elsif @request.is_mini? and @is_in_black_list == false
+
+- if @request.is_mini? and (@is_in_black_list == false)
   %p 
     Извините, вам отказано. Попробуйте подъехать в один из наших 
     = link_to "офисов", offices_path 
     и заполнить более подробную анкету.
+
