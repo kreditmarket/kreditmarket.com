@@ -276,27 +276,22 @@ $(document).ready(function() {
 	
 	$('#goto5-bnt').click(function() {
         showStep(5);
-        $('body').stop().scrollTo( $('#goto5-lnk') , 500 );
         // window.location = $('#current-url').val()+'#shag-25';
     });
 	$('#goto4-bnt').click(function() {
         showStep(4);
-        $('body').stop().scrollTo( $('#goto4-lnk') , 500 );
         // window.location = $('#current-url').val()+'#shag-4';
     });
 	$('#goto3-bnt').click(function() {
         showStep(3);
-        $('body').stop().scrollTo( $('#goto3-lnk') , 500 );
         // window.location = $('#current-url').val()+'#shag-3';
     });
     $('#goto2-bnt').click(function() {
         showStep(2);
-        $('body').stop().scrollTo( $('#goto2-lnk') , 500 );
         // window.location = $('#current-url').val()+'#shag-2';
     });
     $('#goto1-bnt').click(function() {
         showStep(1);
-        $('body').stop().scrollTo( $('#goto1-lnk') , 500 );
         // window.location = $('#current-url').val()+'#shag-1';
     });
     

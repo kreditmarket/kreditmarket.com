@@ -28,4 +28,8 @@ module RequestsHelper
        "10 дней"
     end
   end
+  
+  def emphasize_if_linked
+    "box-emphasized" if params[:to] == "mini"
+  end
 end

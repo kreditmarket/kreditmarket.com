@@ -898,6 +898,7 @@ table th span {
   border-bottom: 1px #df1d5c dotted;
 }
 .b-form-wrapper { position: relative; }
+.box-emphasized { border: 3px solid red; }
 #mini {
   display: block;
   position: absolute;

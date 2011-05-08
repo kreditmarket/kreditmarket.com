@@ -19,5 +19,3 @@
       %span.secondary-count= number_to_currency(debth(params[:request][:amount], fee(params[:request][:amount], params[:request][:days])))
   .loan-details
     = render "form"
-
-= render "requests/mini"

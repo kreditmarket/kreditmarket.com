@@ -1,4 +1,4 @@
-1304823669
+1304893683
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -144,6 +144,7 @@ e	/home/adam/Projects/kreditmarket.com/public/javascripts/jquery.js	function e(l
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	  def edit
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/requests_controller.rb	  def edit
 edit	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb		def edit
+emphasize_if_linked	/home/adam/Projects/kreditmarket.com/app/helpers/requests_helper.rb	  def emphasize_if_linked
 empty?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
 empty?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	        def empty?() 
 empty?	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/test/dynamic_form_test.rb	      def empty?
