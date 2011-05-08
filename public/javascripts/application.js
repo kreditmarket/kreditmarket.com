@@ -25,7 +25,7 @@ $(document).ready(function() {
   // Mini-ticket:
   // Open the mini-ticket box when paytypes table's row is clicked
   $("table#payment-types tr").click(function() {
-    $.facebox({div: "/requests/mini"}, "miniBox");
+    $.facebox({div: "#miniBox"}, "miniBox");
   });
   
 	$(".overlay_wrapper > input").focusin(function() {
