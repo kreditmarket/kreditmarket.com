@@ -2,7 +2,7 @@
 .text-block
   %p.checkout-the-mini
     Не тратьте свое время, 
-    %a{:href => "#miniBox", :rel => "facebox[.miniBox]"} проверьте 
+    %a{:href => "#miniBox", :rel => "facebox[.miniBox]"} проверьте
     прямо на сайте возможность получения денег. 
     %br/
     Это займет ровно одну минуту.
@@ -74,7 +74,7 @@
     %br/
     %h2#paytypes Наша программа выдачи
     .b-content-main_wide
-      %table
+      %table#payment-types
         %thead
           %tr
             %th{:width => "10%"} Тип клиента
@@ -169,4 +169,4 @@
   .loan-details
     = render "requests/form"
     
-= render "requests/mini_box"
+= render "requests/mini"

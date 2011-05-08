@@ -3,10 +3,12 @@ KreditmarketCom::Application.routes.draw do
 
   get "home/index"
 
-  resources :requests do
+  resources :requests do    
   	member do
   		get	"accept" => "requests#accept"
 		end
+    
+    get "/mini" => "requests#mini", :as => :mini, :on => :collection
   end
   resources :pages
   resources :users do

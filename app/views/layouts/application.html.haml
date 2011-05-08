@@ -22,12 +22,12 @@
               %span.number 997-15-55
             %br/
             %span.nobr
-              %span.number +7 927 606-31-85
+              %span.number +7 (917) 957-67-92
             .address
               %h2 Самара, пр. Карла Маркса 510В
               %span ООО «Магазин Кредитов»
               = link_to_unless_current 'Схема проезда', office_path("karla-marksa-510v")
-              = other_branches_link
+              = link_to_unless_current "7 офисов продаж", offices_path, :class => "emphasized"
           - if signed_in?
             - unless current_user.is? :moderator
               .user-bar

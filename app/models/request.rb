@@ -5,4 +5,5 @@ class Request < ActiveRecord::Base
   validates :personal_last_name, :presence => true
   validates :personal_first_name, :presence => true
   validates :personal_surname, :presence => true
+  validates :personal_mob_phone, :presence => true, :length => { :minimum => 7 }, :numericality => true
 end

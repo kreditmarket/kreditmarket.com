@@ -10,6 +10,12 @@ class RequestsController < ApplicationController
     end
   end
   
+  def mini
+    @request = Request.new(:is_mini => true)
+    
+    render :layout => false
+  end
+  
   def accept
   	@request = Request.find(params[:id]) if params[:id]
 		if @request.update_attribute("is_accepted", true)

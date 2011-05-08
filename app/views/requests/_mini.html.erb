@@ -1,4 +1,4 @@
-<div id="miniBox" class="miniBox">
+<div id="miniBox" class="miniBox">  
   <h1>Мини-анкета</h1>
   <p class="lid">
     Напишите свое полное имя, номер телефона и отправьте нам заявку.
@@ -6,9 +6,9 @@
     мы сообщим вам где вы сможете забрать свои деньги.
   </p>
   <p class="amount-and-term">
-    <span id="miniAmount">3000 руб.</span> на <span id="miniTerm">10 дней</span>.
+    <span id="miniAmount"><%= default_amount_unless_exists %></span> на <span id="miniTerm"><%= default_term_unless_exists %></span>.
   </p>
-<%= simple_form_for @request do |f| %>
+<%= simple_form_for @request, :html => { :onsubmit => '$("#facebox #submitBtn").hide(); $("#facebox #miniLoading").show();' } do |f| %>
   <div class="mini-form">    
     <%= f.input :personal_last_name, :label => "Фамилия", :required => false %>
     <%= f.input :personal_first_name, :label => "Имя", :required => false %>

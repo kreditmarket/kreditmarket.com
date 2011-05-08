@@ -1,14 +1,23 @@
 = title "Быстрые займы в Самаре | Магазин Кредитов"
+
+:javascript
+  $(function() {
+    $.scrollTo(".loan-conditions", {
+      axis: "y",
+      duration: 800
+    });
+  });
+
 #step-2{:style => "display: block;"}
   .loan-conditions
     .b-loan-results
       Занимаете
-      %span.primary-count 3000 руб.
+      %span.primary-count= number_to_currency params[:request][:amount]
       + налоги и проценты
-      %span.fees 600 руб.
+      %span.fees= number_to_currency(fee(params[:request][:amount], params[:request][:days]))
       \= отдаете
-      %span.secondary-count 3600 руб.
+      %span.secondary-count= number_to_currency(debth(params[:request][:amount], fee(params[:request][:amount], params[:request][:days])))
   .loan-details
     = render "form"
 
-= render "requests/mini_box"
+= render "requests/mini"

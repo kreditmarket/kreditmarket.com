@@ -16,16 +16,17 @@ function declOfNum(number, titles) {
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];
 }
 
-$(document).ready(function() {
+$(document).ready(function() {  
   // facebox
   $.facebox.settings.closeImage = '/images/closelabel.png';
   $.facebox.settings.loadingImage = '/images/loading.gif';
   $('a[rel*=facebox]').facebox();
   
-  $("#mini > h4").click(function() {
-    $.facebox({div: "#miniBox"}, "miniBox");
+  // Mini-ticket:
+  // Open the mini-ticket box when paytypes table's row is clicked
+  $("table#payment-types tr").click(function() {
+    $.facebox({div: "/requests/mini"}, "miniBox");
   });
-  
   
 	$(".overlay_wrapper > input").focusin(function() {
 		$("label[for="+ this.id +"]").addClass("focus");
@@ -46,7 +47,7 @@ $(document).ready(function() {
 	
 	$("#submit1").click(function() {
 		$("#step-1").hide();
-		$("#step-2").show();
+		$("#step-2").show();    
 		
 		return false;
 	});
@@ -54,9 +55,14 @@ $(document).ready(function() {
 	$("#submit2").click(function() {
 		$("#step-1").hide();
 		$("#step-2").show();
+    $(".checkout-the-mini").hide();
+    $.scrollTo(".loan-conditions", {
+      axis: "y",
+      duration: 800
+    });
 		
 		return false;
-	});
+	});    
 	
 	$("#submit3").click(function() {
 		$("#step-1").hide();
@@ -68,6 +74,7 @@ $(document).ready(function() {
 	$("span.recalc").click(function() {
 		$("#step-1").show();
 		$("#step-2").hide();
+    $(".checkout-the-mini").show();
 		
 		return false;
 	});
