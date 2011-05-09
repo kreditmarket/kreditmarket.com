@@ -14,7 +14,7 @@ module RequestsHelper
   end
   
   def default_amount_unless_exists
-    if controller.action_name =="create" && params[:request][:amount].present?
+    if controller.controller_name == "requests" && controller.action_name =="create" && params[:request][:amount].present?
       number_to_currency params[:request][:amount]
     else
       number_to_currency 3000
@@ -22,7 +22,7 @@ module RequestsHelper
   end
   
   def default_term_unless_exists
-    if controller.action_name =="create" && params[:request][:days].present?
+    if controller.controller_name == "requests" && controller.action_name =="create" && params[:request][:days].present?
       params[:request][:days] + " дней"
     else
        "10 дней"

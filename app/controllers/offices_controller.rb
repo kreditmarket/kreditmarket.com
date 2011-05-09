@@ -46,10 +46,4 @@ class OfficesController < ApplicationController
       redirect_to(offices_url)
     end
   end 
-  
-  private
-    
-    def define_request
-      @request = Request.new unless @request
-    end
 end
