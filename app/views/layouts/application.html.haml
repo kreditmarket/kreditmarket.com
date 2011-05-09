@@ -11,6 +11,9 @@
             = link_to(image_tag('logo.jpg'), root_path)
           .logo2
             = image_tag "logo2.jpg", :style => "position: relative; top: -15px;"
+            - unless controller.controller_name == "requests" && controller.action_name == "create"
+              %a{:href => "#miniBox", :rel => "facebox[.miniBox]", :class => "mini-button"} 
+                = image_tag "mini-button.png"
           .phone
             %h3 Прием заявок по телефону
             %span.nobr{:style => "font-weight: bold;"}

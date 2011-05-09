@@ -1098,3 +1098,8 @@ p.checkout-the-mini a {
   text-decoration: none;
   border-bottom: 1px dashed #df1d5c;
 }
+.mini-button {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}

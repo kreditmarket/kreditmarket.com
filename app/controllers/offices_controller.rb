@@ -1,6 +1,8 @@
 # encoding: utf-8
 
 class OfficesController < ApplicationController
+  before_filter :define_request
+  
   def index
     @offices = Office.all
   end
@@ -44,4 +46,10 @@ class OfficesController < ApplicationController
       redirect_to(offices_url)
     end
   end 
+  
+  private
+    
+    def define_request
+      @request = Request.new unless @request
+    end
 end

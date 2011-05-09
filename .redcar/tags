@@ -1,4 +1,4 @@
-1304893683
+1304900919
 Ability	/home/adam/Projects/kreditmarket.com/app/models/ability.rb	class Ability
 ActionView	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	module ActionView
 AddAcceptedToRequests	/home/adam/Projects/kreditmarket.com/db/migrate/20110226205011_add_accepted_to_requests.rb	class AddAcceptedToRequests 
@@ -114,6 +114,7 @@ declOfNum	/home/adam/Projects/kreditmarket.com/public/javascripts/application.js
 default_amount_unless_exists	/home/adam/Projects/kreditmarket.com/app/helpers/requests_helper.rb	  def default_amount_unless_exists
 default_input_block	/home/adam/Projects/kreditmarket.com/vendor/plugins/dynamic_form/lib/action_view/helpers/dynamic_form.rb	      def default_input_block
 default_term_unless_exists	/home/adam/Projects/kreditmarket.com/app/helpers/requests_helper.rb	  def default_term_unless_exists
+define_request	/home/adam/Projects/kreditmarket.com/app/controllers/offices_controller.rb	    def define_request
 define_the_user	/home/adam/Projects/kreditmarket.com/app/controllers/users_controller.rb			def define_the_user
 destination_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    attr_writer :compression, :header, :destination_path, :source_path
 destination_path	/home/adam/Projects/kreditmarket.com/vendor/plugins/more/lib/less/more.rb	    def destination_path
