@@ -21,12 +21,12 @@ class UserMailer < ActionMailer::Base
     
     if @request.is_mini?
       # mail(:to => "magazinkreditov@mail.ru", :subject => "Новая онлайн заявка (мини) ")
-      mail(:to => "adam.miribyan@gmail.com", :subject => "Новая онлайн-заявка (мини)") do |format|
+      mail(:to => "magazinkreditov@mail.ru", :subject => "Новая онлайн-заявка (мини)") do |format|
         format.html { render 'loan_mini_request_to_office' }
       end
     else
       # mail(:to => "magazinkreditov@mail.ru", :subject => "Новая онлайн заявка ")
-      mail(:to => "adam.miribyan@gmail.com", :subject => "Новая онлайн-заявка")
+      mail(:to => "magazinkreditov@mail.ru", :subject => "Новая онлайн-заявка")
     end
   end
   
@@ -48,12 +48,12 @@ class UserMailer < ActionMailer::Base
     
     if @request.is_mini?
       # mail(:to => "kreditmarket.com@yandex.ru", :subject => "Новая онлайн заявка")
-      mail(:to => "adam.miribyan@gmail.com", :subject => "Новая онлайн-заявка (мини)") do |format|
+      mail(:to => "kreditmarket.com@yandex.ru", :subject => "Новая онлайн-заявка (мини)") do |format|
         format.html { render 'loan_mini_request_to_director' }
       end
     else
       # mail(:to => "kreditmarket.com@yandex.ru", :subject => "Новая онлайн заявка")
-      mail(:to => "adam.miribyan@gmail.com", :subject => "Новая онлайн-заявка")
+      mail(:to => "kreditmarket.com@yandex.ru", :subject => "Новая онлайн-заявка")
     end    
   end
 end
