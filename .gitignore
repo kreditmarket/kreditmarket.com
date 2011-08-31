@@ -1,6 +1,6 @@
 .DS_Store
 .bundle
-.redcar
+.redcar/
 log/*
 log/**/*
 tmp/*
@@ -8,5 +8,3 @@ tmp/**/*
 db/*.sqlite3
 public/system
 config/boot.rb
-Gemfile
-Gemfile.lock
