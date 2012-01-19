@@ -30,13 +30,13 @@ end
 
 # Thinking Sphinx
 task :before_update_code, :roles => [:app] do
-  thinking_sphinx.stop
+#  thinking_sphinx.stop
 end
 
 task :after_update_code, :roles => [:app] do
   symlink_sphinx_indexes
-  thinking_sphinx.configure
-  thinking_sphinx.start
+#  thinking_sphinx.configure
+#  thinking_sphinx.start
 end
 
 task :symlink_sphinx_indexes, :roles => [:app] do
