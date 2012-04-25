@@ -12,15 +12,6 @@
 
 ActiveRecord::Schema.define(:version => 20110422160940) do
 
-  create_table "debtors", :force => true do |t|
-    t.text "full_name"
-    t.text "birth_date"
-    t.text "pas_1"
-    t.text "pas_2"
-  end
-
-  add_index "debtors", ["id"], :name => "id", :unique => true
-
   create_table "offices", :force => true do |t|
     t.string   "slug"
     t.string   "address"
