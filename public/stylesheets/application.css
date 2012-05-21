@@ -487,8 +487,6 @@ span.half-space {
 .content .b-content-body .b-content-footnotes .branch .time {
   color: #888888;
   display: inline-block;
-  text-align: right;
-  float: right;
 }
 .content .b-content-body .b-content-footnotes .branch .addr { font-style: italic; }
 .content .b-content-body .b-affiliate-button {
