@@ -33,10 +33,3 @@
   </p>
 <% end %>
 </div>
-
-<%= javascript_tag do %>
-  $("input#accept-terms").live("change", function(){
-    $("#submitBtnDisabled").hide();
-    $("#submitBtn").show();
-  });
-<% end %>
