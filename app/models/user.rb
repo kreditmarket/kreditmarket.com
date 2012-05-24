@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
   include Clearance::User
+
+  has_many :requests, :foreign_key => 'creator_id'
   
   ROLES = %w[admin moderator agent]
   

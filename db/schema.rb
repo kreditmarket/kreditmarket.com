@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110422160940) do
+ActiveRecord::Schema.define(:version => 20120524114321) do
 
   create_table "offices", :force => true do |t|
     t.string   "slug"
@@ -88,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20110422160940) do
     t.boolean  "is_accepted",                     :default => false
     t.string   "personal_mob_phone"
     t.boolean  "is_mini",                         :default => false
+    t.integer  "creator_id"
   end
 
   create_table "users", :force => true do |t|
