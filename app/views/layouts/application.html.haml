@@ -47,6 +47,11 @@
                 %ol
                   %li= link_to_unless_current "Список агентов", agents_path
                   %li= link_to "Выйти", sign_out_path, :method => :delete
+          - else
+            .user-bar
+              %ol
+                %li= link_to_unless_current "Войти", login_path
+                %li= link_to_unless_current "Зарегистрироваться", signup_path 
           .clear
             
         .content

@@ -23,7 +23,9 @@ KreditmarketCom::Application.routes.draw do
   match "agents" => 'users#index', :as => "agents"
   post "reset" => 'users#reset', :as => "reset"
   
-  match 'sign_out' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
+  match 'login' => 'sessions#new', :as => 'login'
+  match 'signup' => 'users#new', :as => 'signup'
+  match 'logout' => 'sessions#destroy', :via => :delete, :as => 'sign_out'
   
   root :to => "home#index"
 
