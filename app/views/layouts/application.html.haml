@@ -15,26 +15,10 @@
               %a{:href => "#miniBox", :rel => "facebox[.miniBox]", :class => "mini-button"} 
                 = image_tag "mini-button.png"
           .phone
-            %h3 Прием заявок по телефонам       
+            %h3 Прием заявок по телефону       
             %span.nobr{:style => "font-weight: bold;"}
-              %span.code (846)
-              %span.number 231-33-90
+              %span.number +7 927 712-12-12
             %br/
-            %span.nobr
-              %span.code (846)
-              %span.number 342-0-900
-            %br/
-            %span.nobr
-              %span.code (846)
-              %span.number 997-15-55
-            %br/
-            %span.nobr
-              %span.number +7 (917) 957-67-92
-            .address
-              %h2 Самара, пр. Карла Маркса 510В
-              %span ООО «Магазин Кредитов»
-              = link_to_unless_current 'Схема проезда', office_path("karla-marksa-510v")
-              = link_to_unless_current offices_count, offices_path, :class => "emphasized"
           - if signed_in?
             - unless current_user.is? :moderator
               .user-bar
@@ -68,9 +52,12 @@
         %br/
         Электропочта:
         = mail_to 'magazinkreditov@mail.ru'
+      .l-column.l-column-left
+        = link_to "Условия и нормативная база", page_path("terms-and-conditions")
       .l-column.l-column-right
         © 
         = Time.new.year
         «Магазин кредитов»
         %br/
         Самара, ул. Куйбышева 71          
+        %br
