@@ -1,25 +1,28 @@
 KreditmarketCom::Application.routes.draw do
-  resources :offices
-
   get "home/index"
 
-  resources :requests do    
+  resources :offices
+  resources :pages
+  resource :session, :controller => "sessions"
+
+  resources :requests do
   	member do
   		get	"accept" => "requests#accept"
 		end
-    
+
     get "/mini" => "requests#mini", :as => :mini, :on => :collection
   end
-  resources :pages
+
   resources :users do
     member do
       get "is_moderator" => "users#is_moderator"
+      get 'account' => 'requests#index'
+      get 'settings' => 'users#edit', :as => :settings
     end
   end
-  resource :session, :controller => "sessions"
   
-  match "profile" => 'users#show', :as => "profile"
-  match "settings" => 'users#edit', :as => "settings"
+  # match "profile" => 'users#show', :as => "profile"
+  # match "settings" => 'users#edit', :as => "settings"
   match "agents" => 'users#index', :as => "agents"
   post "reset" => 'users#reset', :as => "reset"
   

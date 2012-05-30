@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class RequestTest < ActiveSupport::TestCase
-  # Replace this with your real tests.
-  test "the truth" do
-    assert true
+  test "should_generate_token" do
+   @request = FactoryGirl.create(:request)
+   assert_not_nil @request.token
   end
 end

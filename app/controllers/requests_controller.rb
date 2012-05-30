@@ -24,20 +24,20 @@ class RequestsController < ApplicationController
   end
 
   def show
-    @request = Request.find(params[:id])
+    @request = Request.find_by_token(params[:id])
     
-    # Black List look up
-    @black_list_search = Debtor.search( @request.personal_last_name  + 
-                                        " " + 
-                                        @request.personal_first_name + 
-                                        " " + 
-                                        @request.personal_surname ).first
+    # # Black List look up
+    # @black_list_search = Debtor.search( @request.personal_last_name  + 
+    #                                     " " + 
+    #                                     @request.personal_first_name + 
+    #                                     " " + 
+    #                                     @request.personal_surname ).first
                                         
-    if @black_list_search.present?
-      @is_in_black_list = true
-    else
-      @is_in_black_list = false
-    end
+    # if @black_list_search.present?
+    #   @is_in_black_list = true
+    # else
+    #   @is_in_black_list = false
+    # end
 
     respond_to do |format|
       format.html # show.html.erb
@@ -47,11 +47,6 @@ class RequestsController < ApplicationController
 
   def new
     @request = Request.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @request }
-    end
   end
 
   def edit
@@ -66,7 +61,7 @@ class RequestsController < ApplicationController
         UserMailer.loan_request_to_office(@request).deliver
         UserMailer.loan_request_to_director(@request).deliver
         
-        format.html { redirect_to(@request) }
+        format.html { redirect_to(account_user_path(current_user)) }
         format.xml  { render :xml => @request, :status => :created, :location => @request }
       else
         format.html { render :action => "new" }

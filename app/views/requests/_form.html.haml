@@ -160,6 +160,7 @@
     = f.input :amount, :as => :hidden
     = f.input :days, :as => :hidden
     = f.input :is_mini, :as => :hidden, :input_html => { :value => false }
+    = f.input :creator_id, :as => :hidden, :input_html => { :value => (current_user.id if signed_in?) }
 
 :javascript
 

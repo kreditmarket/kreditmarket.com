@@ -10,10 +10,24 @@ gem 'russian'
 gem 'clearance'
 gem 'cancan'
 gem 'mysql2'
-gem 'thinking-sphinx', :git => "git://github.com/freelancing-god/thinking-sphinx.git", :branch => "rails3"
+# gem 'thinking-sphinx', :git => "git://github.com/freelancing-god/thinking-sphinx.git", :branch => "rails3"
 gem 'RedCloth', '4.2.8'
 
 gem 'capistrano'
 
-#group :development, :test do
-#end
+group :test do
+  # Capybara for integration tests
+  gem 'capybara'
+  gem 'database_cleaner'
+  # Girls in a factories
+  gem 'factory_girl_rails'
+  # Spork
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'spork-testunit'
+  gem 'ruby-prof' # for benchmarks
+  # Guards
+  gem 'guard-spork'
+  gem 'guard-test', "~> 0.4.3"
+  # Pretty printed test output
+  gem 'turn', require: false
+end

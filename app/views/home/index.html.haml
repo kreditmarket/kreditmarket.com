@@ -63,15 +63,15 @@
           %span.addr= link_to office.address, office
           %span.time= office.mode
     
-      .b-affiliate-button
-        %h3 У нас действует выгодная
-        %a{:href => url_for_affiliate}
-          %span.new-button-small
-            %div{:class => "b-form-button"} партнерская программа
-        %p{:style => "padding-left: 2px;"}
-          И программа
-          = succeed "." do
-            = link_to "для инвесторов", page_path("investment")
+      -# .b-affiliate-button
+      -#   %h3 У нас действует выгодная
+      -#   %a{:href => url_for_affiliate}
+      -#     %span.new-button-small
+      -#       %div{:class => "b-form-button"} партнерская программа
+      -#   %p{:style => "padding-left: 2px;"}
+      -#     И программа
+      -#     = succeed "." do
+      -#       = link_to "для инвесторов", page_path("investment")
         
     .clear
     %br/

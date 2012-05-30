@@ -39,14 +39,14 @@
             - unless current_user.is? :moderator
               .user-bar
                 %ol
-                  %li= link_to_unless_current "Личный кабинет", profile_path
-                  %li= link_to_unless_current "Настройки", settings_path
+                  %li= link_to_unless_current "Личный кабинет", account_user_path(current_user)
+                  %li= link_to_unless_current "Настройки", settings_user_path(current_user)
                   %li= link_to 'Выйти', sign_out_path, :method => :delete
             - else
               .user-bar
                 %ol
                   %li= link_to_unless_current "Список агентов", agents_path
-                  %li= link_to "Выйти", sign_out_path, :method => :delete
+                  %li= link_to "Выйти", logout_path, :method => :delete
           - else
             .user-bar
               %ol

@@ -1,0 +1,21 @@
+<% title "Ваши заявки" %>
+
+<h1>Ваши заявки</h1>
+
+<div class="b-profile-page">
+  <%= render :partial => 'users/name' %>
+
+  <%= link_to "Новая заявка", root_path(:anchor => 'step-1') %>
+
+  <div class="b-content">
+    <ol class="requests" style="margin: 1.4em 0;">
+      <% current_user.requests.each do |request| %>
+        <%= content_tag :li, :style => 'margin-left: 0; list-style-type: decimal;' do %>
+          <%= link_to "#{number_to_currency request.amount} на #{request.days} дней", request %>
+          от <%= request.created_at.strftime("%d.%m.%Y") %>
+        <%= link_to "удалить", request, :method => :delete, :confirm => "Вы уверены?" %>
+        <% end %>
+      <% end %>
+    </ol>
+  </div>
+</div>

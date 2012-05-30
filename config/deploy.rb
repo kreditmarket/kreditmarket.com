@@ -1,4 +1,4 @@
-require 'thinking_sphinx/deploy/capistrano'
+# require 'thinking_sphinx/deploy/capistrano'
 
 set :user, 'kreditmarket'
 

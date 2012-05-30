@@ -32,4 +32,8 @@ module RequestsHelper
   def emphasize_if_linked
     "box-emphasized" if params[:to] == "mini"
   end
+
+  def request_title(request)
+    "#{number_to_currency request.amount} на #{request.days} дней"
+  end
 end
