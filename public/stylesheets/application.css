@@ -1103,3 +1103,16 @@ p.checkout-the-mini a {
   margin-top: 15px;
   text-align: center;
 }
+ol.requests li.request-item small {
+  font-size: 0.97em;
+  color: #666666;
+}
+ol.requests a.remove-link {
+  font-size: 0.85em;
+  color: #222222;
+  display: inline-block;
+  margin-left: 1.1em;
+  padding-left: 16px;
+  background: url('http://milevedent.adammiribyan.com/assets/icon_trash-d0f142f0728a5a2247597451a9a38b66.png') no-repeat top left;
+}
+a.new-request-link { color: #006600; }

@@ -5,15 +5,14 @@
 <div class="b-profile-page">
   <%= render :partial => 'users/name' %>
 
-  <%= link_to "Новая заявка", root_path(:anchor => 'step-1') %>
+  <%= link_to "Новая заявка", root_path(:anchor => 'step-1'), :class => "new-request-link" %>
 
   <div class="b-content">
     <ol class="requests" style="margin: 1.4em 0;">
       <% current_user.requests.each do |request| %>
-        <%= content_tag :li, :style => 'margin-left: 0; list-style-type: decimal;' do %>
-          <%= link_to "#{number_to_currency request.amount} на #{request.days} дней", request %>
-          от <%= request.created_at.strftime("%d.%m.%Y") %>
-        <%= link_to "удалить", request, :method => :delete, :confirm => "Вы уверены?" %>
+        <%= content_tag :li, :class => "request-item", :style => 'margin-left: 0; list-style-type: decimal;' do %>
+          <%= number_to_currency request.amount %> <small>на</small> <%= request.days %> дней <small>от <%= request.created_at.strftime("%d.%m.%Y") %></small>
+          <%= link_to "удалить", request, :class => "remove-link", :method => :delete, :confirm => "Вы уверены?" %>
         <% end %>
       <% end %>
     </ol>
