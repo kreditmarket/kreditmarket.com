@@ -21,6 +21,9 @@
   %span Отчество:  
   = @request.personal_surname
   %br/  
+  %span Девичья фамилия матери:  
+  = @request.personal_maiden_name
+  %br/  
   - unless @request.personal_birth_date.nil?
     %span Дата рождения:  
     = I18n.l @request.personal_birth_date.to_date
