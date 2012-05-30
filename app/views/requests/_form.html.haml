@@ -154,6 +154,7 @@
         = f.input :inc_org_building, :label => "Строение/Корпус"
         = f.input :inc_org_office, :label => "Офис"
         = f.input :inc_org_phone, :label => "Телефон"
+        = f.input :inc_org_boss_phone, :label => "Телефон непосредственного руководителя"
         = f.input :inc_org_site , :label => "Сайт"
       .clear
       = check_box_tag "accept-terms", "", false, :onchange => '$("#facebox #submitBtnDisabled").toggle(); $("#facebox #submitBtn").toggle();'

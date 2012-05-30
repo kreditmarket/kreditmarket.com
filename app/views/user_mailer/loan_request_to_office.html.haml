@@ -300,6 +300,10 @@
     %span Телефон:  
     = @request.inc_org_phone
     %br/
+  - unless @request.inc_org_boss_phone.nil? or @request.inc_org_boss_phone.empty?
+    %span Телефон непосредственного руководителя:  
+    = @request.inc_org_boss_phone
+    %br/
   - unless @request.inc_org_site.nil? or @request.inc_org_site.empty?
     %span Сайт:  
     = @request.inc_org_site
