@@ -119,6 +119,15 @@
         = f.input :second_cont_per_st_phone, :label => "Дом. телефон"
         = f.input :second_cont_per_mob_phone, :label => "Моб. телефон"
       .clear  
+      .l-column
+        %h3 Третье контактное лицо      
+        = f.input :third_cont_per_last_name, :label => "Фамилия"
+        = f.input :third_cont_per_first_name, :label => "Имя"
+        = f.input :third_cont_per_surname, :label => "Отчество"
+        = f.input :third_cont_per_relatives_level, :label => "Степень родства"
+        = f.input :third_cont_per_st_phone, :label => "Дом. телефон"
+        = f.input :third_cont_per_mob_phone, :label => "Моб. телефон"
+      .clear
       .buttons
         %span.new-button-small
           %div{:class => "b-form-button", :id => "goto3-bnt", :onclick => "showStep(3)"} ← Назад

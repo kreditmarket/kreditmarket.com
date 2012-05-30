@@ -220,6 +220,34 @@
     %span Моб. телефон: 
     = @request.second_cont_per_mob_phone
     %br/
+  %em Третье контактное лицо
+  %br/
+  - unless @request.third_cont_per_last_name.nil? or @request.third_cont_per_last_name.empty?
+    %span Фамилия:  
+    = @request.third_cont_per_last_name
+    %br/
+  - unless @request.third_cont_per_first_name.nil? or @request.third_cont_per_first_name.empty?
+    %span Имя:  
+    = @request.third_cont_per_first_name
+    %br/
+  - unless @request.third_cont_per_surname.nil? or @request.third_cont_per_surname.empty?
+    %span Отчество:  
+    = @request.third_cont_per_surname
+    %br/
+  - unless @request.third_cont_per_relatives_level.nil? or @request.third_cont_per_relatives_level.empty?
+    %span Степень родства: 
+    = @request.third_cont_per_relatives_level
+    %br/
+  - unless @request.third_cont_per_st_phone.nil? or @request.third_cont_per_st_phone.empty?
+    %span Дом. телефон:  
+    = @request.third_cont_per_st_phone
+    %br/
+  - unless @request.third_cont_per_mob_phone.nil? or @request.third_cont_per_mob_phone.empty?
+    %span Моб. телефон:  
+    = @request.third_cont_per_mob_phone
+    %br/
+  %br/
+  %br/
 %br/
 %br/
 

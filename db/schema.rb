@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120530001008) do
+ActiveRecord::Schema.define(:version => 20120530001644) do
 
   create_table "offices", :force => true do |t|
     t.string   "slug"
@@ -91,6 +91,12 @@ ActiveRecord::Schema.define(:version => 20120530001008) do
     t.integer  "creator_id"
     t.string   "token"
     t.string   "personal_maiden_name"
+    t.string   "third_cont_per_first_name"
+    t.string   "third_cont_per_last_name"
+    t.string   "third_cont_per_surname"
+    t.string   "third_cont_per_relatives_level"
+    t.string   "third_cont_per_st_phone"
+    t.string   "third_cont_per_mob_phone"
   end
 
   create_table "users", :force => true do |t|
