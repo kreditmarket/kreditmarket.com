@@ -157,7 +157,7 @@
         = f.input :inc_org_site , :label => "Сайт"
       .clear
       = check_box_tag "accept-terms", "", false, :onchange => '$("#facebox #submitBtnDisabled").toggle(); $("#facebox #submitBtn").toggle();'
-      = "Заполнив настоящую анкету, я понимаю и соглашаюсь cо следующими #{link_to 'условиями', page_path("request-terms"), target: "blank"}.".html_safe
+      %span.checkbox-label= "Заполнив настоящую анкету, я понимаю и соглашаюсь cо следующими #{link_to 'условиями', page_path("request-terms"), :target => 'blank'} и принимаю условия #{link_to 'договора-аферты', "/offer.docx", :target => 'blank'}.".html_safe
       %br
       %br
       .buttons 
