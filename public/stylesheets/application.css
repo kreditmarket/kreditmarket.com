@@ -480,8 +480,8 @@ span.half-space {
 .content .b-content-body .b-content-footnotes h2 { margin-bottom: 0.85em; }
 .content .b-content-body .b-content-footnotes .branch {
   font-size: 12px;
-  line-height: 18px;
-  margin-bottom: 14px;
+  line-height: 1.7em;
+  padding-left: 1.4em;
 }
 .content .b-content-body .b-content-footnotes .branch .time {
   color: #888888;
