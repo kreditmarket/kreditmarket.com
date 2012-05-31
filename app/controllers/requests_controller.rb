@@ -85,11 +85,11 @@ class RequestsController < ApplicationController
   end
 
   def destroy
-    @request = Request.find(params[:id])
+    @request = Request.find_by_token(params[:id])
     @request.destroy
 
     respond_to do |format|
-      format.html { redirect_to(requests_url) }
+      format.html { redirect_to(account_user_path(current_user)) }
       format.xml  { head :ok }
     end
   end
